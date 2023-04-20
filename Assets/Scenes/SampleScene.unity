@@ -176,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 204ea4911028e82468d3e8ca007a2e71, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -466,6 +466,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1030681270}
   speed: 10
+  gravity: -30
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &1030681274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +494,7 @@ GameObject:
   - component: {fileID: 1955256893}
   - component: {fileID: 1955256892}
   - component: {fileID: 1955256891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
