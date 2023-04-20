@@ -153,9 +153,27 @@
             "id": "eef14112-2513-4fc9-9b63-9227d313d31f",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Exit",
                     "type": "Button",
-                    "id": "3efe2f25-439b-4b31-b4be-fd65387f8b1e",
+                    "id": "18d59030-2f9e-4f26-a42f-667d01ccbd0b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Enter",
+                    "type": "Button",
+                    "id": "19f543d0-30ef-4ccd-ac15-24a4679e3cce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Selection",
+                    "type": "Button",
+                    "id": "29d2e7e3-dea3-4fc1-ba91-775ff93363a0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -164,13 +182,90 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "e610239d-7ef9-4de4-9921-439fb05b069a",
-                    "path": "",
+                    "name": "Arrows",
+                    "id": "14086fb0-7d79-48b6-8a0f-0291103bcb3d",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Selection",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "b5bcc4a4-1f1a-4637-b32c-6725f6046c17",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c62d2bb7-2beb-41d9-911c-28c458e30313",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "WS",
+                    "id": "4dda3536-f868-48b2-aec7-16f2868e3867",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "bbda2730-4de3-4fa5-be8d-3cda50ecaa0f",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "25385c85-dced-42a4-841a-f9c27fb5c175",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Selection",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "bcf24c5a-d9aa-4cf9-a0e5-f4cdbe1a5c3e",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b6eafd5-075a-4b27-98f9-82a1470af25e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
