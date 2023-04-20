@@ -5,52 +5,50 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
+    [SerializeField] Rigidbody rb;
     [SerializeField] float speed = 10f;
 
-    Vector2 horizointalInput;
+    Vector2 horizontalInput;
 
-    [SerializeField] float jumpHeight = 5f;
+    [SerializeField] float jumpForce = 5f;
     bool jump;
 
-    [SerializeField] float gravity = -30f; //-9.81f 
-    Vector3 verticalVelocity = Vector3.zero;
     [SerializeField] LayerMask groundMask;
     bool isGrounded;
+    float halfHeight;
+
+    private void Start()
+    {
+        halfHeight = controller.height * 0.5f;
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
+
+        rb.AddForce(horizontalVelocity * Time.deltaTime, ForceMode.Acceleration);
+    }
 
     private void Update()
-    {
-        float halfHeight = controller.height * 0.5f;
+    {        
         var bottomPoint = transform.TransformPoint(controller.center - Vector3.up * halfHeight);
-
         isGrounded = Physics.CheckSphere(bottomPoint, 0.1f, groundMask);
-
-        if (isGrounded)
-        {
-            verticalVelocity.y = 0;
-        }
-
-        Vector3 horizontalVelocity = (transform.right * horizointalInput.x + transform.forward * horizointalInput.y) * speed;
-
-        controller.Move(horizontalVelocity * Time.deltaTime);
 
         //Jump formula -> v = sqrt(-2 * jumpHeight * gravity)
         if (jump)
         {
             if (isGrounded)
             {
-                verticalVelocity.y = Mathf.Sqrt(-2f * jumpHeight * gravity);
+                rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
             }
 
             jump = false;
         }
-
-        verticalVelocity.y += gravity * Time.deltaTime;
-        controller.Move(verticalVelocity * Time.deltaTime);
     }
 
-    public void ReceiveInput(Vector2 _horizointalInput)
+    public void ReceiveInput(Vector2 _horizontalInput)
     {
-        horizointalInput = _horizointalInput;
+        horizontalInput = _horizontalInput;
     }
 
     public void OnJumpPressed()
