@@ -415,7 +415,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 2.84
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1030681270}
   speed: 10
+  jumpHeight: 5
   gravity: -30
   groundMask:
     serializedVersion: 2

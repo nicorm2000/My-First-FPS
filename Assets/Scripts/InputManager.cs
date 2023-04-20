@@ -16,11 +16,13 @@ public class InputManager : MonoBehaviour
     {
         controls = new PlayerControls();
         groundMovement = controls.GroundMovement;
+
+        groundMovement.Jump.performed += _ => movement.OnJumpPressed();
     }
 
     private void Update()
     {
-        horizontalInput = groundMovement.HorizontalMovement.ReadValue<Vector2>();
+        horizontalInput = groundMovement.HorizontalMovement.ReadValue<Vector2>(); //Reads constantly the player input
         movement.ReceiveInput(horizontalInput);
     }
 
