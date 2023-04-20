@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1030681273}
+  mouseLook: {fileID: 1030681274}
 --- !u!114 &1030681273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05aa107bbda0f954eb3b2656b03c02d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensitivityX: 20
+  sensitivityY: 0.05
+  playerCamera: {fileID: 963194228}
+  xClamp: 40
 --- !u!1 &1955256890
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8b34f9d1b61ee164ab2fc1a74a9bc864, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     {
         float halfHeight = controller.height * 0.5f;
         var bottomPoint = transform.TransformPoint(controller.center - Vector3.up * halfHeight);
-        
+
         isGrounded = Physics.CheckSphere(bottomPoint, 0.1f, groundMask);
 
         if (isGrounded)
