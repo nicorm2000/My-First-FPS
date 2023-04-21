@@ -22,19 +22,14 @@ public class Movement : MonoBehaviour
         halfHeight = controller.height * 0.5f;
     }
 
-    private void FixedUpdate()
-    {
-        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
-
-        rb.AddForce(horizontalVelocity * Time.deltaTime, ForceMode.Acceleration);
-    }
-
     private void Update()
     {        
+        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
+        transform.position += horizontalVelocity * Time.deltaTime;
+
         var bottomPoint = transform.TransformPoint(controller.center - Vector3.up * halfHeight);
         isGrounded = Physics.CheckSphere(bottomPoint, 0.1f, groundMask);
 
-        //Jump formula -> v = sqrt(-2 * jumpHeight * gravity)
         if (jump)
         {
             if (isGrounded)
