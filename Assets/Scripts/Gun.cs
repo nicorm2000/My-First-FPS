@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
         {
             if (hit.collider.GetComponent<Damageable>() != null)
             {
-                hit.collider.GetComponent<Damageable>().TakeDamge(damage);
+                hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
             }
         }
     }
