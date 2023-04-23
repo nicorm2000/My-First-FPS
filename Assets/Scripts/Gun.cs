@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    Transform camera;
+    Transform cam;
 
     [SerializeField] float range = 50f;
     [SerializeField] float damage = 10f;
 
     private void Awake()
     {
-        camera = Camera.main.transform;
+        cam = Camera.main.transform;
     }
 
     public void Shoot()
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(camera.position, camera.forward, out hit, range))
+        if (Physics.Raycast(cam.position, cam.forward, out hit, range))
         {
-            Debug.Log(hit.collider.name);
+            if (hit.collider.GetComponent<Damageable>() != null)
+            {
+                hit.collider.GetComponent<Damageable>().TakeDamge(damage);
+            }
         }
     }
 }
