@@ -9,6 +9,8 @@ public class Gun : MonoBehaviour
     [SerializeField] float range = 50f;
     [SerializeField] float damage = 10f;
 
+    [SerializeField] float fireRate = 5f;
+
     private void Awake()
     {
         cam = Camera.main.transform;
@@ -24,6 +26,18 @@ public class Gun : MonoBehaviour
             {
                 hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
             }
+        }
+    }
+
+    public IEnumerator RapidFire()
+    {
+        bool rapidFireBool = true;
+
+        while (rapidFireBool)
+        {
+            Shoot();
+
+            yield return new WaitForSeconds(1 / fireRate);
         }
     }
 }
