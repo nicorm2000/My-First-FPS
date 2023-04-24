@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        InitInputs();
+    }
+
+    private void InitInputs()
+    {
         controls = new PlayerControls();
 
         groundMovement = controls.GroundMovement;
@@ -30,28 +36,30 @@ public class InputManager : MonoBehaviour
         //Here is the subscription to the mouse movement
 
         groundMovement.MouseX.performed += ctx => mouseInput.x = ctx.ReadValue<float>();
-        
+
         groundMovement.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
 
         //Here is the subscription and unsubscription to the Shoot event happens
         groundMovement.Shoot.started += _ => StartFiring();
-        
+
         groundMovement.Shoot.canceled += _ => StopFiring();
     }
 
     private void Update()
     {
-        //Reads constantly the player input
-        horizontalInput = groundMovement.HorizontalMovement.ReadValue<Vector2>(); 
-
         movement.ReceiveInput(horizontalInput);
 
         mouseLook.ReceiveInput(mouseInput);
     }
 
+    private void OnHorizontalMovement(InputValue input)
+    {
+        horizontalInput = input.Get<Vector2>();
+    }
+
     void StartFiring()
     {
-        fireCoroutine = StartCoroutine(gun.RapidFire());
+        fireCoroutine = StartCoroutine(gun.ShootCoroutine());
     }
 
     void StopFiring()

@@ -79,5 +79,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6893398787094456675, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
+--- !u!4 &7290130980997897679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4674633484117532113, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
+  m_PrefabInstance: {fileID: 2734843731622215710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7632148163930875325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5485045366576653731, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
+  m_PrefabInstance: {fileID: 2734843731622215710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2282724432695673998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632148163930875325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff0c5b26720ff646874876e3fda7d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 50
+  damage: 12
+  maxAmmo: 20
+  fireRate: 5
+  reloadTime: 2.5
+  inaccuracyDistance: 0.1
+  displayLaser: 0
+  laser: {fileID: 7809484386866186683, guid: 1c4ec5ef76fe1fe44b39ddc4e6f624ff, type: 3}
+  muzzle: {fileID: 7290130980997897679}
+  fadeDuration: 0.3

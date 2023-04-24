@@ -2696,7 +2696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5140044372641087257}
-  - component: {fileID: 5485045366576653728}
+  - component: {fileID: 6893398787094456675}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -2768,7 +2768,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5485045366576653728
+--- !u!114 &6893398787094456675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2777,22 +2777,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5485045366576653731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aff0c5b26720ff646874876e3fda7d8e, type: 3}
+  m_Script: {fileID: 11500000, guid: c69287db652508c43aa1c71c310a8f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   range: 50
-  damage: 10
-  maxAmmo: 20
-  fireRate: 7
-  reloadTime: 3
-  inaccuracyDistance: 5
-  rapidFire: 1
-  shotgun: 0
-  bulletsPerShot: 6
+  damage: 15
+  maxAmmo: 12
+  fireRate: 9
+  reloadTime: 2
+  inaccuracyDistance: 4
   displayLaser: 0
   laser: {fileID: 7809484386866186683, guid: 1c4ec5ef76fe1fe44b39ddc4e6f624ff, type: 3}
   muzzle: {fileID: 4674633484117532113}
   fadeDuration: 0.3
+  bulletsPerShot: 6
 --- !u!1 &5583641468725355224
 GameObject:
   m_ObjectHideFlags: 0

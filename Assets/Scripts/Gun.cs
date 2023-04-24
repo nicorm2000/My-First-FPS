@@ -9,23 +9,15 @@ public class Gun : MonoBehaviour
     [SerializeField] float range = 50f;
     [SerializeField] float damage = 10f;
     [SerializeField] int maxAmmo;
-    int currentAmmo;
+    protected int currentAmmo;
 
-    [SerializeField] float fireRate = 5f;
+    [SerializeField] protected float fireRate = 5f;
     [SerializeField] float reloadTime;
     WaitForSeconds reloadWait;
 
     [SerializeField] float inaccuracyDistance = 5f;
 
-    [Header("Rapid Fire")]
-    [SerializeField] bool rapidFire = false;
-    WaitForSeconds rapidFireWait;
-
-    [Header("ShotGun")]
-    [SerializeField] bool shotgun = false;
-    [SerializeField] int bulletsPerShot = 6;
-
-    [Header("Laser")]
+    [Header("Debugger")]
     [SerializeField] bool displayLaser = true;
     [SerializeField] GameObject laser;
     [SerializeField] Transform muzzle;
@@ -35,28 +27,21 @@ public class Gun : MonoBehaviour
     {
         cam = Camera.main.transform;
 
-        rapidFireWait = new WaitForSeconds(1 / fireRate);
-
         reloadWait = new WaitForSeconds(reloadTime);
 
         currentAmmo = maxAmmo;
     }
 
-    public void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
+    public virtual void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
+    {
+        UpdateAmmo();
+
+        ShootLogic();
+    }
+
+    protected void UpdateAmmo()
     {
         currentAmmo--;
-
-        if (shotgun)
-        {
-            for (int i = 0; i < bulletsPerShot; i++)
-            {
-                ShootLogic();
-            }
-        }
-        else
-        {
-            ShootLogic();
-        }
     }
 
     public void ShootLogic()//The logic behind the shooting, it is made into a function because it is used more than once
@@ -85,31 +70,19 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public IEnumerator RapidFire()//Coroutine that checks which fire type is being used
+    public virtual IEnumerator ShootCoroutine()//Coroutine that checks which fire type is being used
     {
         if (CanShoot())
         {
             Shoot();
-
-            if (rapidFire)
-            {
-                while (CanShoot())
-                {
-                    yield return rapidFireWait;
-                    
-                    Shoot();
-                }
-
-                StartCoroutine(Reload());
-            }
         }
         else
         {
-            StartCoroutine(Reload());
+            yield return Reload();
         }
     }
 
-    IEnumerator Reload()//Coroutine that reloads the weapon
+    protected IEnumerator Reload()//Coroutine that reloads the weapon
     {
         if (currentAmmo == maxAmmo)
         {
@@ -125,7 +98,7 @@ public class Gun : MonoBehaviour
         Debug.Log("Weapon Reloaded");
     }
 
-    bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
+    protected bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
     {
         bool enoughAmmo = currentAmmo > 0;
 
