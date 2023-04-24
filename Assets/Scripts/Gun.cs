@@ -27,8 +27,10 @@ public class Gun : MonoBehaviour
     [SerializeField] int bulletsPerShot = 6;
 
     [Header("Laser")]
+    [SerializeField] bool displayLaser = true;
     [SerializeField] GameObject laser;
     [SerializeField] Transform muzzle;
+    [SerializeField] float fadeDuration = 0.3f;
 
     private void Awake()
     {
@@ -46,27 +48,37 @@ public class Gun : MonoBehaviour
         {
             for (int i = 0; i < bulletsPerShot; i++)
             {
-                RaycastHit hit;
-
-                if (Physics.Raycast(cam.position, GetShootingDirection(), out hit, range))
-                {
-                    if (hit.collider.GetComponent<Damageable>() != null)
-                    {
-                        hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
-                    }
-                }
+                ShootLogic();
             }
         }
         else
         {
-            RaycastHit hit;
+            ShootLogic();
+        }
+    }
 
-            if (Physics.Raycast(cam.position, GetShootingDirection(), out hit, range))
+    public void ShootLogic()
+    {
+        RaycastHit hit;
+
+        Vector3 shootingDir = GetShootingDirection();
+
+        if (Physics.Raycast(cam.position, shootingDir, out hit, range))
+        {
+            if (hit.collider.GetComponent<Damageable>() != null)
             {
-                if (hit.collider.GetComponent<Damageable>() != null)
-                {
-                    hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
-                }
+                hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
+            }
+            if (displayLaser)
+            {
+                CreateLaser(hit.point);
+            }
+        }
+        else
+        {
+            if (displayLaser)
+            {
+                CreateLaser(cam.position + shootingDir * range);
             }
         }
     }
@@ -129,5 +141,27 @@ public class Gun : MonoBehaviour
         Vector3 direction = targetPos - cam.position;
 
         return direction.normalized;
+    }
+
+    void CreateLaser(Vector3 end)
+    {
+        LineRenderer lr = Instantiate(laser).GetComponent<LineRenderer>();
+        lr.SetPositions(new Vector3[2] { muzzle.position, end });
+
+        StartCoroutine(FadeLaser(lr));
+    }
+
+    IEnumerator FadeLaser(LineRenderer lr)
+    {
+        float alpha = 1f;
+
+        while (alpha > 0)
+        {
+            alpha -= Time.deltaTime / fadeDuration;
+            lr.startColor = new Color(lr.startColor.r, lr.startColor.g, lr.startColor.b, alpha);
+            lr.endColor = new Color(lr.endColor.r, lr.endColor.g, lr.endColor.b, alpha);
+
+            yield return null;
+        }
     }
 }
