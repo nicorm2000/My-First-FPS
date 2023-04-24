@@ -29,9 +29,6 @@ public class InputManager : MonoBehaviour
         groundMovement.MouseX.performed += ctx => mouseInput.x = ctx.ReadValue<float>();
         groundMovement.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
 
-        //Script for Single fire shooting
-        //groundMovement.Shoott.performed += _ => gun.Shoot();
-        
         groundMovement.Shoott.started += _ => StartFiring();
         groundMovement.Shoott.canceled += _ => StopFiring();
     }

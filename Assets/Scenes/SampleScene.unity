@@ -1205,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4456489624249259116, guid: 968c6e16ae89a6c4fad3cc29ceac94a5, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 968c6e16ae89a6c4fad3cc29ceac94a5, type: 3}
@@ -1738,6 +1738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 50
   damage: 10
+  fireRate: 5
 --- !u!33 &926741561800820293
 MeshFilter:
   m_ObjectHideFlags: 0

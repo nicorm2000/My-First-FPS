@@ -6,14 +6,19 @@ public class Gun : MonoBehaviour
 {
     Transform cam;
 
+    [SerializeField] bool rapidFire = false;
+
     [SerializeField] float range = 50f;
     [SerializeField] float damage = 10f;
 
     [SerializeField] float fireRate = 5f;
 
+    WaitForSeconds rapidFireWait;
+
     private void Awake()
     {
         cam = Camera.main.transform;
+        rapidFireWait = new WaitForSeconds(1 / fireRate);
     }
 
     public void Shoot()
@@ -33,11 +38,20 @@ public class Gun : MonoBehaviour
     {
         bool rapidFireBool = true;
 
-        while (rapidFireBool)
+        if (rapidFire)
+        {
+            while (rapidFireBool)
+            {
+                Shoot();
+
+                yield return rapidFireWait;
+            }
+        }
+        else
         {
             Shoot();
 
-            yield return new WaitForSeconds(1 / fireRate);
+            yield return null;
         }
     }
 }
