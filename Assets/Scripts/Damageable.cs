@@ -38,7 +38,7 @@ public class Damageable : MonoBehaviour
         //Makes the effect a child so if the object is destroyed the effect is destroyed as well
         hitParticleEffect.transform.parent = gameObject.transform;
         
-
+        //Implement extra dmg function
 
         currentHealth -= damage;
 

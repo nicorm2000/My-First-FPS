@@ -128,6 +128,7 @@ public class Gun : MonoBehaviour
     bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
     {
         bool enoughAmmo = currentAmmo > 0;
+
         return enoughAmmo;
     }
 
@@ -155,7 +156,12 @@ public class Gun : MonoBehaviour
         StartCoroutine(FadeLaser(lr));
     }
 
-    IEnumerator FadeLaser(LineRenderer lr)//Makes the laser trail fade away
+    /// <summary>
+    /// Makes the laser trail fade away
+    /// </summary>
+    /// <param name="lr"></param>
+    /// <returns></returns>
+    IEnumerator FadeLaser(LineRenderer lr)
     {
         float alpha = 1f;
 
