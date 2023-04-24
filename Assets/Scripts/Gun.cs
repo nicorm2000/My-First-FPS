@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    Transform cam;
+    protected Transform cam;
 
     [Header("General Stats")]
     [SerializeField] float range = 50f;
@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform muzzle;
     [SerializeField] float fadeDuration = 0.3f;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         cam = Camera.main.transform;
 
@@ -34,9 +34,11 @@ public class Gun : MonoBehaviour
 
     public virtual void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
     {
-        UpdateAmmo();
 
-        ShootLogic();
+        if (TryToShoot())
+        {
+            UpdateAmmo();
+        }
     }
 
     protected void UpdateAmmo()
@@ -44,7 +46,7 @@ public class Gun : MonoBehaviour
         currentAmmo--;
     }
 
-    public void ShootLogic()//The logic behind the shooting, it is made into a function because it is used more than once
+    public bool TryToShoot()//The logic behind the shooting, it is made into a function because it is used more than once
     {
         RaycastHit hit;
 
@@ -60,6 +62,7 @@ public class Gun : MonoBehaviour
             {
                 CreateLaser(hit.point);
             }
+            return true;
         }
         else
         {
@@ -67,9 +70,10 @@ public class Gun : MonoBehaviour
             {
                 CreateLaser(cam.position + shootingDir * range);
             }
+            return false;
         }
     }
-
+    
     public virtual IEnumerator ShootCoroutine()//Coroutine that checks which fire type is being used
     {
         if (CanShoot())
@@ -78,15 +82,16 @@ public class Gun : MonoBehaviour
         }
         else
         {
-            yield return Reload();
+            StartCoroutine(Reload());
         }
+        yield break;
     }
 
     protected IEnumerator Reload()//Coroutine that reloads the weapon
     {
         if (currentAmmo == maxAmmo)
         {
-            yield return null;
+            yield break;
         }
 
         Debug.Log("Reloading...");
@@ -129,11 +134,8 @@ public class Gun : MonoBehaviour
         StartCoroutine(FadeLaser(lr));
     }
 
-    /// <summary>
-    /// Makes the laser trail fade away
-    /// </summary>
-    /// <param name="lr"></param>
-    /// <returns></returns>
+    // <summary>
+    // Makes the laser trail fade away
     IEnumerator FadeLaser(LineRenderer lr)
     {
         float alpha = 1f;

@@ -7,13 +7,15 @@ public class RapidFire : Gun
     [Header("Rapid Fire")]
     WaitForSeconds rapidFireWait;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         rapidFireWait = new WaitForSeconds(1 / fireRate);
     }
 
     public override IEnumerator ShootCoroutine()
     {
+
         while (CanShoot())
         {
             yield return rapidFireWait;
@@ -21,6 +23,6 @@ public class RapidFire : Gun
             Shoot();
         }
 
-        yield return Reload();
+        StartCoroutine(Reload());
     }
 }

@@ -108,7 +108,7 @@ MonoBehaviour:
   damage: 12
   maxAmmo: 20
   fireRate: 5
-  reloadTime: 2.5
+  reloadTime: 1
   inaccuracyDistance: 0.1
   displayLaser: 0
   laser: {fileID: 7809484386866186683, guid: 1c4ec5ef76fe1fe44b39ddc4e6f624ff, type: 3}
