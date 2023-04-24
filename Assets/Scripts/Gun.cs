@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -40,7 +39,7 @@ public class Gun : MonoBehaviour
         currentAmmo = maxAmmo;
     }
 
-    public void Shoot()
+    public void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
     {
         currentAmmo--;
 
@@ -57,7 +56,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public void ShootLogic()
+    public void ShootLogic()//The logic behind the shooting, it is made into a function because it is used more than once
     {
         RaycastHit hit;
 
@@ -83,7 +82,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public IEnumerator RapidFire()
+    public IEnumerator RapidFire()//Coroutine that checks which fire type is being used
     {
         if (CanShoot())
         {
@@ -97,6 +96,7 @@ public class Gun : MonoBehaviour
                     
                     Shoot();
                 }
+
                 StartCoroutine(Reload());
             }
         }
@@ -106,7 +106,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    IEnumerator Reload()
+    IEnumerator Reload()//Coroutine that reloads the weapon
     {
         if (currentAmmo == maxAmmo)
         {
@@ -119,16 +119,16 @@ public class Gun : MonoBehaviour
 
         currentAmmo = maxAmmo;
 
-        Debug.Log("Reloaded");
+        Debug.Log("Weapon Reloaded");
     }
 
-    bool CanShoot()
+    bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
     {
         bool enoughAmmo = currentAmmo > 0;
         return enoughAmmo;
     }
 
-    Vector3 GetShootingDirection()
+    Vector3 GetShootingDirection()//Gets the direction of where we are shooting, it also calculate how accurate the shooting will be
     {
         Vector3 targetPos = cam.position + cam.forward * range;
 
@@ -143,22 +143,25 @@ public class Gun : MonoBehaviour
         return direction.normalized;
     }
 
-    void CreateLaser(Vector3 end)
+    void CreateLaser(Vector3 end)//Creates the laser
     {
         LineRenderer lr = Instantiate(laser).GetComponent<LineRenderer>();
+
         lr.SetPositions(new Vector3[2] { muzzle.position, end });
 
         StartCoroutine(FadeLaser(lr));
     }
 
-    IEnumerator FadeLaser(LineRenderer lr)
+    IEnumerator FadeLaser(LineRenderer lr)//Makes the laser trail fade away
     {
         float alpha = 1f;
 
         while (alpha > 0)
         {
             alpha -= Time.deltaTime / fadeDuration;
+
             lr.startColor = new Color(lr.startColor.r, lr.startColor.g, lr.startColor.b, alpha);
+
             lr.endColor = new Color(lr.endColor.r, lr.endColor.g, lr.endColor.b, alpha);
 
             yield return null;

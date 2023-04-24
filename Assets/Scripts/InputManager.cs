@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -19,24 +17,35 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
         controls = new PlayerControls();
+
         groundMovement = controls.GroundMovement;
 
         //groundMovement.[action].performed += context => do x something (how this event call work)
-        //Instead of ctx I use _ when I don't need any information
+        //Instead of ctx (context) I use _ when I don't need any information
+
+        //Here is the subscription towards the jump event happens
 
         groundMovement.Jump.performed += _ => movement.OnJumpPressed();
 
+        //Here is the subscription to the mouse movement
+
         groundMovement.MouseX.performed += ctx => mouseInput.x = ctx.ReadValue<float>();
+        
         groundMovement.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
 
-        groundMovement.Shoott.started += _ => StartFiring();
-        groundMovement.Shoott.canceled += _ => StopFiring();
+        //Here is the subscription and unsubscription to the Shoot event happens
+        groundMovement.Shoot.started += _ => StartFiring();
+        
+        groundMovement.Shoot.canceled += _ => StopFiring();
     }
 
     private void Update()
     {
-        horizontalInput = groundMovement.HorizontalMovement.ReadValue<Vector2>(); //Reads constantly the player input
+        //Reads constantly the player input
+        horizontalInput = groundMovement.HorizontalMovement.ReadValue<Vector2>(); 
+
         movement.ReceiveInput(horizontalInput);
+
         mouseLook.ReceiveInput(mouseInput);
     }
 

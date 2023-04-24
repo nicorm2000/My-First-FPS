@@ -64,7 +64,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Shoott"",
+                    ""name"": ""Shoot"",
                     ""type"": ""Button"",
                     ""id"": ""dbac8d29-89bf-48af-9663-1c9543ed60b8"",
                     ""expectedControlType"": ""Button"",
@@ -213,7 +213,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Shoott"",
+                    ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -228,7 +228,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_GroundMovement_Jump = m_GroundMovement.FindAction("Jump", throwIfNotFound: true);
         m_GroundMovement_MouseX = m_GroundMovement.FindAction("MouseX", throwIfNotFound: true);
         m_GroundMovement_MouseY = m_GroundMovement.FindAction("MouseY", throwIfNotFound: true);
-        m_GroundMovement_Shoott = m_GroundMovement.FindAction("Shoott", throwIfNotFound: true);
+        m_GroundMovement_Shoot = m_GroundMovement.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -292,7 +292,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_GroundMovement_Jump;
     private readonly InputAction m_GroundMovement_MouseX;
     private readonly InputAction m_GroundMovement_MouseY;
-    private readonly InputAction m_GroundMovement_Shoott;
+    private readonly InputAction m_GroundMovement_Shoot;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -301,7 +301,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_GroundMovement_Jump;
         public InputAction @MouseX => m_Wrapper.m_GroundMovement_MouseX;
         public InputAction @MouseY => m_Wrapper.m_GroundMovement_MouseY;
-        public InputAction @Shoott => m_Wrapper.m_GroundMovement_Shoott;
+        public InputAction @Shoot => m_Wrapper.m_GroundMovement_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -323,9 +323,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @MouseY.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
                 @MouseY.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
                 @MouseY.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
-                @Shoott.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoott;
-                @Shoott.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoott;
-                @Shoott.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoott;
+                @Shoot.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -342,9 +342,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @MouseY.started += instance.OnMouseY;
                 @MouseY.performed += instance.OnMouseY;
                 @MouseY.canceled += instance.OnMouseY;
-                @Shoott.started += instance.OnShoott;
-                @Shoott.performed += instance.OnShoott;
-                @Shoott.canceled += instance.OnShoott;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
             }
         }
     }
@@ -355,6 +355,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
-        void OnShoott(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }

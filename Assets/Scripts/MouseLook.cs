@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
@@ -17,6 +15,7 @@ public class MouseLook : MonoBehaviour
     {
         //This lets me modify the cursor behaviour
         Cursor.visible = false;
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -25,15 +24,21 @@ public class MouseLook : MonoBehaviour
         transform.Rotate(Vector3.up, mouseX * Time.deltaTime);
 
         xRotation -= mouseY;
+
+        //This lets me clamp the movement in the x axis so that the player can fully rotate the camera
         xRotation = Mathf.Clamp(xRotation, -xClamp, xClamp);
+
         Vector3 targetRotation = transform.eulerAngles;
+
         targetRotation.x = xRotation;
+
         playerCamera.eulerAngles = targetRotation;
     }
 
     public void ReceiveInput(Vector2 mouseInput)
     {
         mouseX = mouseInput.x * sensitivityX;
+
         mouseY = mouseInput.y * sensitivityY;
     }
 }

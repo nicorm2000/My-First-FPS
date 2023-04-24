@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -23,11 +21,14 @@ public class Movement : MonoBehaviour
     }
 
     private void Update()
-    {        
+    {   
+        //This lets the player move
         Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
+        
         transform.position += horizontalVelocity * Time.deltaTime;
 
         var bottomPoint = transform.TransformPoint(controller.center - Vector3.up * halfHeight);
+        
         isGrounded = Physics.CheckSphere(bottomPoint, 0.1f, groundMask);
 
         if (jump)
