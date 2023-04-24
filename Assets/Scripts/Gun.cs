@@ -16,6 +16,8 @@ public class Gun : MonoBehaviour
     [SerializeField] float reloadTime;
     WaitForSeconds reloadWait;
 
+    [SerializeField] float inaccuracyDistance = 5f;
+
     [Header("Rapid Fire")]
     [SerializeField] bool rapidFire = false;
     WaitForSeconds rapidFireWait;
@@ -23,6 +25,10 @@ public class Gun : MonoBehaviour
     [Header("ShotGun")]
     [SerializeField] bool shotgun = false;
     [SerializeField] int bulletsPerShot = 6;
+
+    [Header("Laser")]
+    [SerializeField] GameObject laser;
+    [SerializeField] Transform muzzle;
 
     private void Awake()
     {
@@ -42,7 +48,7 @@ public class Gun : MonoBehaviour
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(cam.position, cam.forward, out hit, range))
+                if (Physics.Raycast(cam.position, GetShootingDirection(), out hit, range))
                 {
                     if (hit.collider.GetComponent<Damageable>() != null)
                     {
@@ -55,7 +61,7 @@ public class Gun : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(cam.position, cam.forward, out hit, range))
+            if (Physics.Raycast(cam.position, GetShootingDirection(), out hit, range))
             {
                 if (hit.collider.GetComponent<Damageable>() != null)
                 {
@@ -108,5 +114,20 @@ public class Gun : MonoBehaviour
     {
         bool enoughAmmo = currentAmmo > 0;
         return enoughAmmo;
+    }
+
+    Vector3 GetShootingDirection()
+    {
+        Vector3 targetPos = cam.position + cam.forward * range;
+
+        targetPos = new Vector3(
+            targetPos.x + Random.Range(-inaccuracyDistance, inaccuracyDistance), 
+            targetPos.y + Random.Range(-inaccuracyDistance, inaccuracyDistance), 
+            targetPos.z + Random.Range(-inaccuracyDistance, inaccuracyDistance)
+            );
+
+        Vector3 direction = targetPos - cam.position;
+
+        return direction.normalized;
     }
 }
