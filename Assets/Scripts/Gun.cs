@@ -34,8 +34,11 @@ public class Gun : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main.transform;
+
         rapidFireWait = new WaitForSeconds(1 / fireRate);
+
         reloadWait = new WaitForSeconds(reloadTime);
+
         currentAmmo = maxAmmo;
     }
 
