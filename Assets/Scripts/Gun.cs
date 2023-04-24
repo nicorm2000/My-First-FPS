@@ -15,14 +15,24 @@ public class Gun : MonoBehaviour
 
     WaitForSeconds rapidFireWait;
 
+    [SerializeField] int maxAmmo;
+    int currentAmmo;
+
+    [SerializeField] float reloadTime;
+    WaitForSeconds reloadWait;
+
     private void Awake()
     {
         cam = Camera.main.transform;
         rapidFireWait = new WaitForSeconds(1 / fireRate);
+        reloadWait = new WaitForSeconds(reloadTime);
+        currentAmmo = maxAmmo;
     }
 
     public void Shoot()
     {
+        currentAmmo--;
+
         RaycastHit hit;
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, range))
@@ -36,22 +46,46 @@ public class Gun : MonoBehaviour
 
     public IEnumerator RapidFire()
     {
-        bool rapidFireBool = true;
-
-        if (rapidFire)
+        if (CanShoot())
         {
-            while (rapidFireBool)
-            {
-                Shoot();
+            Shoot();
 
-                yield return rapidFireWait;
+            if (rapidFire)
+            {
+                while (CanShoot())
+                {
+                    yield return rapidFireWait;
+                    
+                    Shoot();
+                }
+                StartCoroutine(Reload());
             }
         }
         else
         {
-            Shoot();
+            StartCoroutine(Reload());
+        }
+    }
 
+    IEnumerator Reload()
+    {
+        if (currentAmmo == maxAmmo)
+        {
             yield return null;
         }
+
+        Debug.Log("Reloading...");
+
+        yield return reloadWait;
+
+        currentAmmo = maxAmmo;
+
+        Debug.Log("Reloaded");
+    }
+
+    bool CanShoot()
+    {
+        bool enoughAmmo = currentAmmo > 0;
+        return enoughAmmo;
     }
 }
