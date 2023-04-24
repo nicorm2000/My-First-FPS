@@ -6,20 +6,23 @@ public class Gun : MonoBehaviour
 {
     Transform cam;
 
-    [SerializeField] bool rapidFire = false;
-
+    [Header("General Stats")]
     [SerializeField] float range = 50f;
     [SerializeField] float damage = 10f;
-
-    [SerializeField] float fireRate = 5f;
-
-    WaitForSeconds rapidFireWait;
-
     [SerializeField] int maxAmmo;
     int currentAmmo;
 
+    [SerializeField] float fireRate = 5f;
     [SerializeField] float reloadTime;
     WaitForSeconds reloadWait;
+
+    [Header("Rapid Fire")]
+    [SerializeField] bool rapidFire = false;
+    WaitForSeconds rapidFireWait;
+
+    [Header("ShotGun")]
+    [SerializeField] bool shotgun = false;
+    [SerializeField] int bulletsPerShot = 6;
 
     private void Awake()
     {
@@ -33,13 +36,31 @@ public class Gun : MonoBehaviour
     {
         currentAmmo--;
 
-        RaycastHit hit;
-
-        if (Physics.Raycast(cam.position, cam.forward, out hit, range))
+        if (shotgun)
         {
-            if (hit.collider.GetComponent<Damageable>() != null)
+            for (int i = 0; i < bulletsPerShot; i++)
             {
-                hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
+                RaycastHit hit;
+
+                if (Physics.Raycast(cam.position, cam.forward, out hit, range))
+                {
+                    if (hit.collider.GetComponent<Damageable>() != null)
+                    {
+                        hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
+                    }
+                }
+            }
+        }
+        else
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(cam.position, cam.forward, out hit, range))
+            {
+                if (hit.collider.GetComponent<Damageable>() != null)
+                {
+                    hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
+                }
             }
         }
     }
