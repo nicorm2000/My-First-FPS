@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float respawnTime = 5f;
 
-    [SerializeField] GameObject hitEffect;
+    [SerializeField] ParticleSystem hitEffect;
 
     [SerializeField] BodyPart[] bodyParts = null;
 
@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                hitEffect.Stop();
                 Die();
             }
         }

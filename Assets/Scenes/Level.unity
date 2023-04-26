@@ -1024,7 +1024,7 @@ PrefabInstance:
     - target: {fileID: 7769587265420355912, guid: 7ac2411c22495464c9bc94d170dae95f, type: 3}
       propertyPath: hitEffect
       value: 
-      objectReference: {fileID: 100002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
+      objectReference: {fileID: 19800002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac2411c22495464c9bc94d170dae95f, type: 3}
 --- !u!1001 &1541710782
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   respawnTime: 5
-  hitEffect: {fileID: 100002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
+  hitEffect: {fileID: 19800002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
   bodyParts:
   - {fileID: 1955256896}
 --- !u!114 &1955256896
