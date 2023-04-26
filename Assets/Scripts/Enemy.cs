@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour
         {
             currentHealth -= damage;
 
+            Debug.Log(damage);
+
             if (currentHealth <= 0)
             {
                 Die();
