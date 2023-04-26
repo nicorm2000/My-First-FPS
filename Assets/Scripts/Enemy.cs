@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Damageable : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] float maxHealth = 100;
     float currentHealth;
@@ -9,42 +9,37 @@ public class Damageable : MonoBehaviour
 
     [SerializeField] GameObject hitEffect;
 
-    [Header("Hitboxes")]
-    public Collider headHitbox;
-    public Collider neckHitbox;
-    public Collider chestHitbox;
-    public Collider bodyHitbox;
-
-    public enum HitboxType
-    {
-        Head,
-        Neck,
-        Chest,
-        Body
-    }
+    [SerializeField] BodyPart[] bodyParts = null;
 
     private void Awake()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamge(float damage, Vector3 hitPos, Vector3 hitNormal)
+    private void Start()
     {
-        float actualDamage = damage;
+        for (int i = 0; i < bodyParts.Length; i++)
+        {
+            bodyParts[i].Init(TakeDamage);
+        }
+    }
 
+    public void TakeDamage(float damage, Vector3 hitPos, Vector3 hitNormal)
+    {
         //Creates the VFX for the shooting effect towards an object
         var hitParticleEffect = Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal));
 
         //Makes the effect a child so if the object is destroyed the effect is destroyed as well
         hitParticleEffect.transform.parent = gameObject.transform;
-        
-        //Implement extra dmg function
 
-        currentHealth -= damage;
-
-        if (currentHealth <= 0)
+        if (!(gameObject.tag == "Ground"))
         {
-            Die();
+            currentHealth -= damage;
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 

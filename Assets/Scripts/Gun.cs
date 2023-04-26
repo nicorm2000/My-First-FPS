@@ -54,9 +54,11 @@ public class Gun : MonoBehaviour
 
         if (Physics.Raycast(cam.position, shootingDir, out hit, range))
         {
-            if (hit.collider.GetComponent<Damageable>() != null)
+            IDamageable auxDamageable = hit.collider.GetComponent<IDamageable>();
+
+            if (auxDamageable != null)
             {
-                hit.collider.GetComponent<Damageable>().TakeDamge(damage, hit.point, hit.normal);
+                auxDamageable.TakeDamage(damage, hit.point, hit.normal);
             }
             if (displayLaser)
             {
