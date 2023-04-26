@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BodyPart : MonoBehaviour, IDamageable
 {
-    [SerializeField] Collider collider = null;
+    [SerializeField] new Collider collider = null;
     [SerializeField] float damageMultiplier = 0f;
 
     public float DamageMultiplier => damageMultiplier;
@@ -19,5 +19,7 @@ public class BodyPart : MonoBehaviour, IDamageable
     public void TakeDamage(float damage, Vector3 hitPos, Vector3 hitNormal)
     {
         takeDamage.Invoke(damage * damageMultiplier, hitPos, hitNormal);
+        Debug.Log(gameObject);
+        Debug.Log(collider);
     }
 }

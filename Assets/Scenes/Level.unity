@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0933a64a06884e48a2c1950b8f5ddf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1e+10
+  maxHealth: 1
   respawnTime: 5
   hitEffect: {fileID: 100002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
   bodyParts:
