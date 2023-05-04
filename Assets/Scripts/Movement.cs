@@ -23,9 +23,9 @@ public class Movement : MonoBehaviour
     private void Update()
     {   
         //This lets the player move
-        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
-        
-        transform.position += horizontalVelocity * Time.deltaTime;
+        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed + Vector3.up * rb.velocity.y;
+
+        rb.velocity = horizontalVelocity;
 
         var bottomPoint = transform.TransformPoint(controller.center - Vector3.up * halfHeight);
         
