@@ -13,15 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140044372641087257, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5140044372641087257, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.309
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5140044372641087257, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.88
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5140044372641087257, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
       propertyPath: m_LocalRotation.w
@@ -114,3 +114,5 @@ MonoBehaviour:
   laser: {fileID: 7809484386866186683, guid: 1c4ec5ef76fe1fe44b39ddc4e6f624ff, type: 3}
   muzzle: {fileID: 7290130980997897679}
   fadeDuration: 0.3
+  positionGun: {fileID: 0}
+  originParent: {fileID: 0}

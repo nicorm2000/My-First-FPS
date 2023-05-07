@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Gun : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Gun : MonoBehaviour
     [SerializeField] float fadeDuration = 0.3f;
     private bool isDropped;
     private GameObject newParent;
+    [SerializeField] GameObject positionGun;
+    [SerializeField] Transform originParent;
 
     protected virtual void Awake()
     {
@@ -36,10 +39,12 @@ public class Gun : MonoBehaviour
 
     public virtual void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
     {
-
-        if (TryToShoot())
+        if (!isDropped)
         {
-            UpdateAmmo();
+            if (TryToShoot())
+            {
+                UpdateAmmo();
+            }
         }
     }
 
@@ -179,5 +184,72 @@ public class Gun : MonoBehaviour
         weaponRB.isKinematic = false;
 
         GetComponent<BoxCollider>().enabled = true;
+    }
+
+    public void OnPickWeapon()
+    {
+        //GameObject player = GameObject.FindGameObjectsWithTag("Player");
+        //GameObject existingWeapon = FindWeaponInChildren(player.transform);
+
+        //if (existingWeapon != null)
+        //{
+        //    return;
+        //}
+
+        float pickUpRadius = 2f;
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, pickUpRadius);
+
+        foreach (Collider hitCollider in hitColliders)
+        {
+            if (hitCollider.tag == "Player")
+            {
+                isDropped = false;
+
+                if (newParent != null)
+                {
+                    Destroy(newParent);
+                }
+
+                transform.parent = originParent;
+
+                Rigidbody weaponRB = gameObject.GetComponent<Rigidbody>();
+
+                if (weaponRB != null)
+                {
+                    Destroy(weaponRB);
+                }
+
+                GetComponent<PlayerInput>().enabled = true;
+                GetComponent<BoxCollider>().enabled = false;
+
+                transform.position = positionGun.transform.position;
+                transform.rotation = positionGun.transform.rotation;
+            }
+        }
+    }
+
+    private GameObject FindWeaponInChildren(Transform parent)
+    {
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            Transform child = parent.GetChild(i);
+
+            if (child.CompareTag("Weapon"))
+            {
+                return child.gameObject;
+            }
+            else
+            {
+                GameObject found = FindWeaponInChildren(child);
+
+                if (found != null)
+                {
+                    return found;
+                }
+            }
+        }
+
+        return null;
     }
 }
