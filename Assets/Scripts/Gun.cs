@@ -39,12 +39,9 @@ public class Gun : MonoBehaviour
 
     public virtual void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
     {
-        if (!isDropped)
+        if (TryToShoot())
         {
-            if (TryToShoot())
-            {
-                UpdateAmmo();
-            }
+            UpdateAmmo();
         }
     }
 
@@ -184,6 +181,7 @@ public class Gun : MonoBehaviour
         weaponRB.isKinematic = false;
 
         GetComponent<BoxCollider>().enabled = true;
+        FindObjectOfType<InputManager>().gun = null;
     }
 
     public void OnPickWeapon()
@@ -225,6 +223,8 @@ public class Gun : MonoBehaviour
 
                 transform.position = positionGun.transform.position;
                 transform.rotation = positionGun.transform.rotation;
+
+                FindObjectOfType<InputManager>().gun = this;
             }
         }
     }

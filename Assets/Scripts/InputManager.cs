@@ -5,7 +5,7 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] Movement movement;
     [SerializeField] MouseLook mouseLook;
-    [SerializeField] Gun gun;
+    [SerializeField] public Gun gun;
 
     PlayerControls controls;
     PlayerControls.GroundMovementActions groundMovement;
@@ -59,7 +59,10 @@ public class InputManager : MonoBehaviour
 
     void StartFiring()
     {
-        fireCoroutine = StartCoroutine(gun.ShootCoroutine());
+        if (gun != null)
+        {
+            fireCoroutine = StartCoroutine(gun.ShootCoroutine());
+        }
     }
 
     void StopFiring()
