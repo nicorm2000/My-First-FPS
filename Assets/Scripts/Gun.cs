@@ -188,13 +188,13 @@ public class Gun : MonoBehaviour
 
     public void OnPickWeapon()
     {
-        //GameObject player = GameObject.FindGameObjectsWithTag("Player");
-        //GameObject existingWeapon = FindWeaponInChildren(player.transform);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject existingWeapon = FindWeaponInChildren(player.transform);
 
-        //if (existingWeapon != null)
-        //{
-        //    return;
-        //}
+        if (existingWeapon != null)
+        {
+            return;
+        }
 
         float pickUpRadius = 2f;
 
