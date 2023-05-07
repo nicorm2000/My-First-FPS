@@ -22,6 +22,8 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject laser;
     [SerializeField] Transform muzzle;
     [SerializeField] float fadeDuration = 0.3f;
+    private bool isDropped;
+    private GameObject newParent;
 
     protected virtual void Awake()
     {
@@ -152,5 +154,30 @@ public class Gun : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void OnDropWeapon()
+    {
+        if (isDropped)
+        {
+            return;
+        }
+
+        isDropped = true;
+
+        if (newParent == null)
+        {
+            newParent = new GameObject("Weapon Place Holder");
+        }
+
+        transform.parent = null;
+
+        transform.parent = newParent.transform;
+
+        Rigidbody weaponRB = gameObject.AddComponent<Rigidbody>();
+        weaponRB.useGravity = true;
+        weaponRB.isKinematic = false;
+
+        GetComponent<BoxCollider>().enabled = true;
     }
 }

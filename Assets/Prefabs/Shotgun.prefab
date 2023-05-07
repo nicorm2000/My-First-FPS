@@ -2697,6 +2697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5140044372641087257}
   - component: {fileID: 6893398787094456675}
+  - component: {fileID: -6031974074526928657}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -2791,6 +2792,19 @@ MonoBehaviour:
   muzzle: {fileID: 4674633484117532113}
   fadeDuration: 0.3
   bulletsPerShot: 6
+--- !u!65 &-6031974074526928657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485045366576653731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07155861, y: 0.2479608, z: 1.212064}
+  m_Center: {x: 0.0019808486, y: 0.08460653, z: -0.1537118}
 --- !u!1 &5583641468725355224
 GameObject:
   m_ObjectHideFlags: 0

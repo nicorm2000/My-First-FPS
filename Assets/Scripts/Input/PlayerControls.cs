@@ -71,6 +71,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Drop Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""5eef9d54-0683-4dee-adba-3f47f4e692c0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pick Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""d25c8f03-2071-4ab3-93fe-cfd1707ac513"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -216,6 +234,50 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd5a294d-ea11-43dd-ba6c-fd7580af9bdd"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drop Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87e52c34-d651-4818-aa84-681439663072"",
+                    ""path"": ""<DualShockGamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drop Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93dd0150-850a-4c80-968b-07993257cead"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pick Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e14b0855-6c79-4181-a589-a900ed7b6257"",
+                    ""path"": ""<DualShockGamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pick Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -229,6 +291,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_GroundMovement_MouseX = m_GroundMovement.FindAction("MouseX", throwIfNotFound: true);
         m_GroundMovement_MouseY = m_GroundMovement.FindAction("MouseY", throwIfNotFound: true);
         m_GroundMovement_Shoot = m_GroundMovement.FindAction("Shoot", throwIfNotFound: true);
+        m_GroundMovement_DropWeapon = m_GroundMovement.FindAction("Drop Weapon", throwIfNotFound: true);
+        m_GroundMovement_PickWeapon = m_GroundMovement.FindAction("Pick Weapon", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -293,6 +357,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_GroundMovement_MouseX;
     private readonly InputAction m_GroundMovement_MouseY;
     private readonly InputAction m_GroundMovement_Shoot;
+    private readonly InputAction m_GroundMovement_DropWeapon;
+    private readonly InputAction m_GroundMovement_PickWeapon;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -302,6 +368,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @MouseX => m_Wrapper.m_GroundMovement_MouseX;
         public InputAction @MouseY => m_Wrapper.m_GroundMovement_MouseY;
         public InputAction @Shoot => m_Wrapper.m_GroundMovement_Shoot;
+        public InputAction @DropWeapon => m_Wrapper.m_GroundMovement_DropWeapon;
+        public InputAction @PickWeapon => m_Wrapper.m_GroundMovement_PickWeapon;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -326,6 +394,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shoot.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
+                @DropWeapon.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnDropWeapon;
+                @DropWeapon.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnDropWeapon;
+                @DropWeapon.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnDropWeapon;
+                @PickWeapon.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPickWeapon;
+                @PickWeapon.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPickWeapon;
+                @PickWeapon.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPickWeapon;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -345,6 +419,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
+                @DropWeapon.started += instance.OnDropWeapon;
+                @DropWeapon.performed += instance.OnDropWeapon;
+                @DropWeapon.canceled += instance.OnDropWeapon;
+                @PickWeapon.started += instance.OnPickWeapon;
+                @PickWeapon.performed += instance.OnPickWeapon;
+                @PickWeapon.canceled += instance.OnPickWeapon;
             }
         }
     }
@@ -356,5 +436,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnDropWeapon(InputAction.CallbackContext context);
+        void OnPickWeapon(InputAction.CallbackContext context);
     }
 }
