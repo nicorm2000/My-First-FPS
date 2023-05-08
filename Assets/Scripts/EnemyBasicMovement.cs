@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyForwardBackwardMovement : MonoBehaviour
+public class EnemyBasicMovement : MonoBehaviour
 {
     [SerializeField] Transform pointA;
     [SerializeField] Transform pointB;
