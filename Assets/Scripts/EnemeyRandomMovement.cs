@@ -6,46 +6,43 @@ public class EnemeyRandomMovement : MonoBehaviour
     [SerializeField] List<Transform> points;
     [SerializeField] float timeBetweenPoints;
 
-    private bool isMovingToPointSelected = true;
-
     private float aux = 0;
+
+    private Transform initial;
+    private Transform target;
+
+    private void Awake()
+    {
+        initial = points[0];
+
+        target = initial;
+
+        UpdateTarget();
+    }
 
     private void Update()
     {
-        if (isMovingToPointSelected)
-        {
-            aux += 1 / timeBetweenPoints * Time.deltaTime;
-        }
-        else
-        {
-            aux -= 1 / timeBetweenPoints * Time.deltaTime;
-        }
+        aux += Time.deltaTime;
+        
+        transform.position = Vector3.Lerp(initial.position, target.position, aux / timeBetweenPoints);
 
-        transform.position = Vector3.Lerp(points[0].position, points[1].position, aux);
+        if (aux > timeBetweenPoints)
+        {
+            aux = 0;
 
-        if (transform.position == points[1].position || transform.position == points[2].position)
-        {
-            isMovingToPointSelected = !isMovingToPointSelected;
-        }
-        if (transform.position == points[3].position || transform.position == points[4].position)
-        {
-            isMovingToPointSelected = !isMovingToPointSelected;
-        }
-        if (transform.position == points[5].position || transform.position == points[6].position)
-        {
-            isMovingToPointSelected = !isMovingToPointSelected;
+            UpdateTarget();
         }
     }
 
-    //private int UpdatePoint(List<Transform> list)
-    //{
-    //    int index = 0;
-    //
-    //    for (int i = 0; i < list.Count; i++)
-    //    {
-    //        index = Random.Range(0, list.Count);
-    //    }
-    //
-    //    return index;
-    //}
+    private void UpdateTarget()
+    {
+        List<Transform> newList = new List<Transform>(points);
+        newList.Remove(target);
+
+        int index = Random.Range(0, newList.Count);
+
+        initial = target;
+
+        target = newList[index];
+    }
 }

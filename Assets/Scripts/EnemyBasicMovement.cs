@@ -5,6 +5,7 @@ public class EnemyBasicMovement : MonoBehaviour
     [SerializeField] Transform pointA;
     [SerializeField] Transform pointB;
     [SerializeField] float timeBetweenPoints;
+
     private bool isMovingToPointA = true;
     
     private float aux = 0;
