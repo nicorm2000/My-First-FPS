@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 4546213286104378605}
   - component: {fileID: 4546213286104378602}
   - component: {fileID: 4546213286104378603}
-  - component: {fileID: 1736613803}
   m_Layer: 0
   m_Name: M16
   m_TagString: Weapon
@@ -109,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff0c5b26720ff646874876e3fda7d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instantiatesBullets: 0
   range: 50
   damage: 12
   maxAmmo: 20
@@ -151,26 +151,6 @@ MonoBehaviour:
   m_DefaultActionMap: GroundMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!95 &1736613803
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8248239348852704493}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e8b370ecd368e4844b214333feb87b72, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3672411734167459183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229,6 +209,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 76bd7ce699ceb3c4fb9682078cc11ea6, type: 3}
       propertyPath: m_Name
       value: M16 Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040542448765327740, guid: 76bd7ce699ceb3c4fb9682078cc11ea6, type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 76bd7ce699ceb3c4fb9682078cc11ea6, type: 3}
+      propertyPath: m_Name
+      value: Mag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bd7ce699ceb3c4fb9682078cc11ea6, type: 3}

@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
     protected Transform cam;
 
     [Header("General Stats")]
+    [SerializeField] bool instantiatesBullets = true;
     [SerializeField] float range = 50f;
     [SerializeField] float damage = 10f;
     [SerializeField] int maxAmmo;
