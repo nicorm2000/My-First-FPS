@@ -89,6 +89,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e311734-6426-40ec-a77f-9e411c107388"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inspect Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a26a503-88e8-43fe-b132-0132ba0bf5b0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -278,6 +296,50 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Pick Weapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9e2973b-2b02-41e6-9049-956fa6736d85"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""517f6fe2-4280-4fa0-8ccb-2fe340bbdcea"",
+                    ""path"": ""<DualShockGamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6eaa8b20-381a-4921-a23c-071a605e78a6"",
+                    ""path"": ""<Keyboard>/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inspect Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b39c661-86d6-427e-b6de-7357962bf618"",
+                    ""path"": ""<DualShockGamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inspect Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -293,6 +355,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_GroundMovement_Shoot = m_GroundMovement.FindAction("Shoot", throwIfNotFound: true);
         m_GroundMovement_DropWeapon = m_GroundMovement.FindAction("Drop Weapon", throwIfNotFound: true);
         m_GroundMovement_PickWeapon = m_GroundMovement.FindAction("Pick Weapon", throwIfNotFound: true);
+        m_GroundMovement_Reload = m_GroundMovement.FindAction("Reload", throwIfNotFound: true);
+        m_GroundMovement_InspectWeapon = m_GroundMovement.FindAction("Inspect Weapon", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -359,6 +423,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_GroundMovement_Shoot;
     private readonly InputAction m_GroundMovement_DropWeapon;
     private readonly InputAction m_GroundMovement_PickWeapon;
+    private readonly InputAction m_GroundMovement_Reload;
+    private readonly InputAction m_GroundMovement_InspectWeapon;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -370,6 +436,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_GroundMovement_Shoot;
         public InputAction @DropWeapon => m_Wrapper.m_GroundMovement_DropWeapon;
         public InputAction @PickWeapon => m_Wrapper.m_GroundMovement_PickWeapon;
+        public InputAction @Reload => m_Wrapper.m_GroundMovement_Reload;
+        public InputAction @InspectWeapon => m_Wrapper.m_GroundMovement_InspectWeapon;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -400,6 +468,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @PickWeapon.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPickWeapon;
                 @PickWeapon.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPickWeapon;
                 @PickWeapon.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPickWeapon;
+                @Reload.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnReload;
+                @InspectWeapon.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnInspectWeapon;
+                @InspectWeapon.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnInspectWeapon;
+                @InspectWeapon.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnInspectWeapon;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -425,6 +499,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @PickWeapon.started += instance.OnPickWeapon;
                 @PickWeapon.performed += instance.OnPickWeapon;
                 @PickWeapon.canceled += instance.OnPickWeapon;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
+                @InspectWeapon.started += instance.OnInspectWeapon;
+                @InspectWeapon.performed += instance.OnInspectWeapon;
+                @InspectWeapon.canceled += instance.OnInspectWeapon;
             }
         }
     }
@@ -438,5 +518,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnDropWeapon(InputAction.CallbackContext context);
         void OnPickWeapon(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
+        void OnInspectWeapon(InputAction.CallbackContext context);
     }
 }

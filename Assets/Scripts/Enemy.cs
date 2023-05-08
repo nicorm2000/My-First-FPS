@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float respawnTime = 5f;
 
+    [SerializeField] ParticleSystem hitEffectParent;
     [SerializeField] ParticleSystem hitEffect;
 
     [SerializeField] BodyPart[] bodyParts = null;
@@ -27,10 +28,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage, Vector3 hitPos, Vector3 hitNormal)
     {
         //Creates the VFX for the shooting effect towards an object
-        var hitParticleEffect = Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal));
+        var hitParticleEffect = Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal), hitEffectParent.transform);
 
         //Makes the effect a child so if the object is destroyed the effect is destroyed as well
-        hitParticleEffect.transform.parent = gameObject.transform;
+        hitParticleEffect.transform.parent = hitEffectParent.transform;
 
         if (!(gameObject.tag == "Ground"))
         {
@@ -40,7 +41,13 @@ public class Enemy : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                hitEffect.Stop();
+                //for (int i = 0; i < hitEffectParent.transform.childCount; i++)
+                //{
+                //    hitEffectParent.transform.GetChild(i).gameObject.SetActive(false);
+                //}
+
+                hitEffectParent.Stop();
+
                 Die();
             }
         }

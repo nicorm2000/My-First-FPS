@@ -24,6 +24,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform muzzle;
     [SerializeField] float fadeDuration = 0.3f;
     private bool isDropped;
+    private bool isCurrentWeapon;
     private GameObject newParent;
     [SerializeField] GameObject positionGun;
     [SerializeField] Transform originParent;
@@ -167,6 +168,8 @@ public class Gun : MonoBehaviour
 
         isDropped = true;
 
+        if (!isCurrentWeapon) return;
+      
         if (newParent == null)
         {
             newParent = new GameObject("Weapon Place Holder");
@@ -182,6 +185,7 @@ public class Gun : MonoBehaviour
 
         GetComponent<BoxCollider>().enabled = true;
         FindObjectOfType<InputManager>().gun = null;
+        isCurrentWeapon = false;
     }
 
     public void OnPickWeapon()
@@ -225,6 +229,7 @@ public class Gun : MonoBehaviour
                 transform.rotation = positionGun.transform.rotation;
 
                 FindObjectOfType<InputManager>().gun = this;
+                isCurrentWeapon = true;
             }
         }
     }
