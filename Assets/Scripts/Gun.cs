@@ -24,6 +24,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject laser;
     [SerializeField] Transform muzzle;
     [SerializeField] float fadeDuration = 0.3f;
+    [SerializeField] float weaponOffset;
     private bool isDropped;
     private bool isCurrentWeapon;
     private GameObject newParent;

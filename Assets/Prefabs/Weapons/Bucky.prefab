@@ -174,6 +174,7 @@ MonoBehaviour:
   laser: {fileID: 7809484386866186683, guid: 1c4ec5ef76fe1fe44b39ddc4e6f624ff, type: 3}
   muzzle: {fileID: 4674633484117532113}
   fadeDuration: 0.3
+  weaponOffset: 0
   positionGun: {fileID: 0}
   originParent: {fileID: 0}
   bulletsPerShot: 6

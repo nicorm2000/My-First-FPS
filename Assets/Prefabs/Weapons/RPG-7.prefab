@@ -149,6 +149,7 @@ MonoBehaviour:
   laser: {fileID: 7809484386866186683, guid: 1c4ec5ef76fe1fe44b39ddc4e6f624ff, type: 3}
   muzzle: {fileID: 1888556794064785192}
   fadeDuration: 0.3
+  weaponOffset: 0
   positionGun: {fileID: 0}
   originParent: {fileID: 0}
 --- !u!1001 &4222676517757242531
