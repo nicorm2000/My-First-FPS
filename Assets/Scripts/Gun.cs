@@ -215,7 +215,7 @@ public class Gun : MonoBehaviour
                     Destroy(newParent);
                 }
 
-                transform.parent = originParent;
+                transform.SetParent(originParent);
 
                 Rigidbody weaponRB = gameObject.GetComponent<Rigidbody>();
 
@@ -227,8 +227,8 @@ public class Gun : MonoBehaviour
                 GetComponent<PlayerInput>().enabled = true;
                 GetComponent<BoxCollider>().enabled = false;
 
-                transform.position = positionGun.transform.position;
                 transform.rotation = positionGun.transform.rotation;
+                transform.localPosition = positionGun.transform.localPosition + new Vector3(0f, 0f, weaponOffset);
 
                 FindObjectOfType<InputManager>().gun = this;
                 isCurrentWeapon = true;

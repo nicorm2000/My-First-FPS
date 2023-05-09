@@ -6563,6 +6563,10 @@ PrefabInstance:
       propertyPath: originParent
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 6893398787094456675, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
+      propertyPath: weaponOffset
+      value: -0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3540de176a7e01248829c7849aa2a612, type: 3}
 --- !u!1 &1561102810
@@ -6611,6 +6615,10 @@ PrefabInstance:
       propertyPath: originParent
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 4546213286104378602, guid: 8f235db081ed32346bcf18866c38d4d3, type: 3}
+      propertyPath: weaponOffset
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6498154870905606960, guid: 8f235db081ed32346bcf18866c38d4d3, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -6875,6 +6883,10 @@ PrefabInstance:
       propertyPath: originParent
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 3662347654448405000, guid: ab43c9bbe84a8af4da69fee6df2b71e6, type: 3}
+      propertyPath: weaponOffset
+      value: -0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8468560422975677716, guid: ab43c9bbe84a8af4da69fee6df2b71e6, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6981,9 +6993,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 801738262}
     - target: {fileID: 4222676518013514656, guid: d5681afbb4f0fa34ebd02347d0de0c45, type: 3}
+      propertyPath: fadeDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222676518013514656, guid: d5681afbb4f0fa34ebd02347d0de0c45, type: 3}
       propertyPath: originParent
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 4222676518013514656, guid: d5681afbb4f0fa34ebd02347d0de0c45, type: 3}
+      propertyPath: weaponOffset
+      value: -0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5910977708408876032, guid: d5681afbb4f0fa34ebd02347d0de0c45, type: 3}
       propertyPath: m_Name
       value: RPG-7

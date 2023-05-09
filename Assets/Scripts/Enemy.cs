@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
 
     [SerializeField] BodyPart[] bodyParts = null;
+
+    private List<ParticleSystem> effects = new List<ParticleSystem>();
 
     private void Awake()
     {
@@ -28,7 +31,9 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage, Vector3 hitPos, Vector3 hitNormal)
     {
         //Creates the VFX for the shooting effect towards an object
-        var hitParticleEffect = Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal), hitEffectParent.transform);
+        ParticleSystem hitParticleEffect = Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal), hitEffectParent.transform);
+
+        effects.Add(hitParticleEffect);
 
         //Makes the effect a child so if the object is destroyed the effect is destroyed as well
         hitParticleEffect.transform.parent = hitEffectParent.transform;
@@ -41,11 +46,6 @@ public class Enemy : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                //for (int i = 0; i < hitEffectParent.transform.childCount; i++)
-                //{
-                //    hitEffectParent.transform.GetChild(i).gameObject.SetActive(false);
-                //}
-
                 hitEffectParent.Stop();
 
                 Die();
@@ -58,6 +58,13 @@ public class Enemy : MonoBehaviour
         Debug.Log(name + " was destroyed");
 
         gameObject.SetActive(false);
+
+        for (int i = 0; i < effects.Count; i++)
+        {
+            Destroy(effects[i].gameObject);
+        }
+
+        effects.Clear();
 
         Invoke("Respawn", respawnTime);
     }
