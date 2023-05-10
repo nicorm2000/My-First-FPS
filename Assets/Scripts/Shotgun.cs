@@ -13,7 +13,7 @@ public class Shotgun : Gun
 
         for (int i = 0; i < bulletsPerShot; i++)
         {
-            TryToShoot();
+            RayCastShoot();
         }
     }
 }

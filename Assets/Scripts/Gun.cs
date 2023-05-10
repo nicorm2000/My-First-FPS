@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
     [Header("Debugger")]
     [SerializeField] bool displayLaser = true;
     [SerializeField] GameObject laser;
-    [SerializeField] Transform muzzle;
+    [SerializeField] protected Transform muzzle;
     [SerializeField] float fadeDuration = 0.3f;
     [SerializeField] float weaponOffset;
     private bool isDropped;
@@ -42,9 +42,19 @@ public class Gun : MonoBehaviour
 
     public virtual void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
     {
-        if (TryToShoot())
+        if (instantiatesBullets)
         {
-            UpdateAmmo();
+            if (BulletShoot())
+            {
+                UpdateAmmo();
+            }
+        }
+        else if (!instantiatesBullets)
+        {
+            if (RayCastShoot()) 
+            { 
+                UpdateAmmo();
+            }
         }
     }
 
@@ -53,7 +63,13 @@ public class Gun : MonoBehaviour
         currentAmmo--;
     }
 
-    public bool TryToShoot()//The logic behind the shooting, it is made into a function because it is used more than once
+    public virtual bool BulletShoot()
+    {
+        Debug.Log("Shoot");
+        return true;
+    }
+
+    public bool RayCastShoot()//The logic behind the shooting, it is made into a function because it is used more than once
     {
         RaycastHit hit;
 
