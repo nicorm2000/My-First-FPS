@@ -4866,7 +4866,7 @@ MonoBehaviour:
   maxHealth: 100
   respawnTime: 5
   hitEffectParent: {fileID: 5446612060320310921}
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 19800002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
   bodyParts:
   - {fileID: 6273319579726030888}
   - {fileID: 2733402357432229697}
