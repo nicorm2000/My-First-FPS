@@ -16,7 +16,7 @@ public class InstantiatedBullets : Gun
 
         Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
 
-        bulletRigidbody.velocity = muzzle.forward * bulletSpeed;
+        bulletRigidbody.AddForce(muzzle.forward * bulletSpeed, ForceMode.Impulse);
 
         return true;
     }
