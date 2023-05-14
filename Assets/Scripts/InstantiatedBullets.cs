@@ -12,9 +12,13 @@ public class InstantiatedBullets : Gun
         //Turn off dummy and turn on when reloading
         //When the dummy is off replace with the instantiat and when reloading place the fake one
 
-        GameObject bullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+        GameObject bulletGO = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
 
-        Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        bullet.Init(effectsHolder, damage);
+
+        Rigidbody bulletRigidbody = bulletGO.GetComponent<Rigidbody>();
 
         bulletRigidbody.AddForce(muzzle.forward * bulletSpeed, ForceMode.Impulse);
 

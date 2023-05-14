@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour
     [Header("General Stats")]
     [SerializeField] bool instantiatesBullets = true;
     [SerializeField] float range = 50f;
-    [SerializeField] float damage = 10f;
+    [SerializeField] protected float damage = 10f;
     [SerializeField] int maxAmmo;
     protected int currentAmmo;
 
@@ -27,9 +27,11 @@ public class Gun : MonoBehaviour
     [SerializeField] float weaponOffset;
     private bool isDropped;
     private bool isCurrentWeapon;
+    private bool isReloading;
     private GameObject newParent;
     [SerializeField] GameObject positionGun;
     [SerializeField] Transform originParent;
+    [SerializeField] protected Transform effectsHolder;
 
     protected virtual void Awake()
     {
@@ -65,7 +67,6 @@ public class Gun : MonoBehaviour
 
     public virtual bool BulletShoot()
     {
-        Debug.Log("Shoot");
         return true;
     }
 
@@ -101,19 +102,24 @@ public class Gun : MonoBehaviour
     
     public virtual IEnumerator ShootCoroutine()//Coroutine that checks which fire type is being used
     {
-        if (CanShoot())
+        if (!isReloading)
         {
-            Shoot();
+            if (CanShoot())
+            {
+                Shoot();
+            }
+            else
+            {
+                StartCoroutine(Reload());
+            }
+            yield break;
         }
-        else
-        {
-            StartCoroutine(Reload());
-        }
-        yield break;
     }
 
     protected IEnumerator Reload()//Coroutine that reloads the weapon
     {
+        isReloading = true;
+
         if (currentAmmo == maxAmmo)
         {
             yield break;
@@ -121,18 +127,18 @@ public class Gun : MonoBehaviour
 
         Debug.Log("Reloading...");
 
-        yield return reloadWait;
+        yield return new WaitForSeconds(reloadTime);
 
         currentAmmo = maxAmmo;
 
         Debug.Log("Weapon Reloaded");
+
+        isReloading = false;
     }
 
     protected bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
     {
-        bool enoughAmmo = currentAmmo > 0;
-
-        return enoughAmmo;
+        return currentAmmo > 0;
     }
 
     Vector3 GetShootingDirection()//Gets the direction of where we are shooting, it also calculate how accurate the shooting will be

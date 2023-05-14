@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     {
         for (int i = 0; i < bodyParts.Length; i++)
         {
-            bodyParts[i].Init(TakeDamage);
+            bodyParts[i].Init(TakeDamage, TakeDamage);
         }
     }
 
@@ -48,6 +48,21 @@ public class Enemy : MonoBehaviour
             {
                 hitEffectParent.Stop();
 
+                Die();
+            }
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (!(gameObject.tag == "Ground"))
+        {
+            currentHealth -= damage;
+
+            Debug.Log(damage);
+
+            if (currentHealth <= 0)
+            {
                 Die();
             }
         }

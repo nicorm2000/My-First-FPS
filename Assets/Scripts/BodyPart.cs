@@ -9,17 +9,22 @@ public class BodyPart : MonoBehaviour, IDamageable
     public float DamageMultiplier => damageMultiplier;
 
     //Stores methods and choose which parameters to use
-    private Action<float, Vector3, Vector3> takeDamage = null;
+    private Action<float, Vector3, Vector3> takeDamageEffects = null;
+    private Action<float> takeDamage = null;
 
-    public void Init(Action<float, Vector3, Vector3> takeDamage)
+    public void Init(Action<float, Vector3, Vector3> takeDamageEffects, Action<float> takeDamage)
     {
+        this.takeDamageEffects = takeDamageEffects;
         this.takeDamage = takeDamage;
     }
 
     public void TakeDamage(float damage, Vector3 hitPos, Vector3 hitNormal)
     {
-        takeDamage.Invoke(damage * damageMultiplier, hitPos, hitNormal);
-        Debug.Log(gameObject);
-        Debug.Log(collider);
+        takeDamageEffects.Invoke(damage * damageMultiplier, hitPos, hitNormal);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        takeDamage.Invoke(damage * damageMultiplier);
     }
 }
