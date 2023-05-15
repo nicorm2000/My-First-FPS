@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7603886285905796808, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
 --- !u!4 &75644788 stripped
@@ -621,6 +625,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &75737430 stripped
@@ -699,6 +707,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &82635855 stripped
@@ -777,6 +789,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &87395182 stripped
@@ -855,6 +871,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &90064678 stripped
@@ -869,6 +889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1473,6 +1497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_05
       objectReference: {fileID: 0}
+    - target: {fileID: 2188610363536904920, guid: a778b631c6253a04899cb31bad047c81, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a778b631c6253a04899cb31bad047c81, type: 3}
 --- !u!4 &192503982 stripped
@@ -1487,6 +1515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 4682430579788248541, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (1)
@@ -1710,6 +1742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &209928851 stripped
@@ -1788,6 +1824,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &210643493 stripped
@@ -1866,6 +1906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &214629499 stripped
@@ -2407,6 +2451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_03 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7603886285905796808, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
 --- !u!4 &285949132 stripped
@@ -2728,6 +2776,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2868,6 +2920,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -2941,6 +2997,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (6)
@@ -3083,6 +3143,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5261466776675129880, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
 --- !u!4 &363869106 stripped
@@ -3166,6 +3230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &379492987 stripped
@@ -8557,6 +8625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &498700726 stripped
@@ -8571,6 +8643,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8713,6 +8789,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &506278620 stripped
@@ -9055,6 +9135,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &569158191 stripped
@@ -9195,6 +9279,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &593580498 stripped
@@ -9894,6 +9982,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &685621532 stripped
@@ -9970,6 +10062,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 4682430579788248541, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (4)
@@ -10330,6 +10426,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &731457841 stripped
@@ -10408,6 +10508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2188610363536904920, guid: a778b631c6253a04899cb31bad047c81, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a778b631c6253a04899cb31bad047c81, type: 3}
 --- !u!4 &744300793 stripped
@@ -10569,6 +10673,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (3)
@@ -11046,6 +11154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &817112044 stripped
@@ -11247,6 +11359,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!1001 &827476928
@@ -11449,6 +11565,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &844747724 stripped
@@ -11752,6 +11872,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &883806602 stripped
@@ -12266,6 +12390,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &921756485 stripped
@@ -12473,6 +12601,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5261466776675129880, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
 --- !u!4 &950358372 stripped
@@ -12806,6 +12938,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &972419004 stripped
@@ -13039,6 +13175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &992688597 stripped
@@ -13117,6 +13257,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &997104311 stripped
@@ -13136,6 +13280,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04
@@ -13209,6 +13357,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -13418,6 +13570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7603886285905796808, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
 --- !u!4 &1029385254 stripped
@@ -13724,6 +13880,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 4682430579788248541, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (5)
@@ -13798,6 +13958,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (1)
@@ -14071,6 +14235,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5261466776675129880, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
 --- !u!4 &1080324954 stripped
@@ -14085,6 +14253,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -14660,6 +14832,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5261466776675129880, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
 --- !u!4 &1147300434 stripped
@@ -15036,6 +15212,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &1205198349 stripped
@@ -15333,6 +15513,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &1244955905 stripped
@@ -15478,6 +15662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &1283036703 stripped
@@ -15556,6 +15744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_05 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2188610363536904920, guid: a778b631c6253a04899cb31bad047c81, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a778b631c6253a04899cb31bad047c81, type: 3}
 --- !u!4 &1312609971 stripped
@@ -15634,6 +15826,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &1316519283 stripped
@@ -15712,6 +15908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_05 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2188610363536904920, guid: a778b631c6253a04899cb31bad047c81, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a778b631c6253a04899cb31bad047c81, type: 3}
 --- !u!4 &1360798823 stripped
@@ -16064,6 +16264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 4682430579788248541, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01
@@ -16202,6 +16406,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &1464253919 stripped
@@ -16427,6 +16635,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &1484946464 stripped
@@ -16503,6 +16715,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -16916,6 +17132,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &1578235384 stripped
@@ -17079,6 +17299,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &1616743296 stripped
@@ -17178,6 +17402,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (2)
@@ -17249,6 +17477,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
   m_PrefabInstance: {fileID: 1637905521}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1646404101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4680757731160225450, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+  m_PrefabInstance: {fileID: 327714687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1646404105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646404101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06222a86ed896bd4c805bd4709617d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 0}
+  damageMultiplier: 0
 --- !u!1001 &1673006416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17382,6 +17629,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5261466776675129880, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
 --- !u!4 &1684517865 stripped
@@ -17956,6 +18207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (5)
@@ -18146,6 +18401,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -18288,6 +18547,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &1825791276 stripped
@@ -18575,6 +18838,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5261466776675129880, guid: 88f2fd29f58b9734683512546acec310, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2fd29f58b9734683512546acec310, type: 3}
 --- !u!4 &1847593509 stripped
@@ -18653,6 +18920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stump_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7060264538690263219, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
 --- !u!4 &1850573231 stripped
@@ -18866,6 +19137,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &1868579625 stripped
@@ -19004,6 +19279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 4682430579788248541, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (2)
@@ -19326,6 +19605,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 4682430579788248541, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (3)
@@ -19526,6 +19809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_03 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7603886285905796808, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
 --- !u!4 &1933138742 stripped
@@ -19604,6 +19891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_03 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7603886285905796808, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
 --- !u!4 &1942908988 stripped
@@ -19875,6 +20166,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2294644523445759764, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
 --- !u!4 &1964969573 stripped
@@ -19953,6 +20248,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &1966164750 stripped
@@ -20400,6 +20699,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 6402405779323789856, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (4)
@@ -20478,6 +20781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534691729}
     m_Modifications:
+    - target: {fileID: 3100324068768620595, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 4680757731159730826, guid: 0fde05fa0f3321942a21896ff4f0856f, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -20654,6 +20961,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5903208441725906831, guid: e289bf5debb17f6459818c207d781953, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e289bf5debb17f6459818c207d781953, type: 3}
 --- !u!4 &2080028414 stripped

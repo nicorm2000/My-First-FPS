@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8783306491909876435}
   - component: {fileID: 8783306491910875155}
   - component: {fileID: 5443217996720745930}
-  - component: {fileID: 6416543916779721716}
-  - component: {fileID: 8325136761114372947}
+  - component: {fileID: 6402405779323789856}
+  - component: {fileID: 9065702224637036965}
   m_Layer: 0
   m_Name: Rock_04
   m_TagString: Untagged
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 33ebf3440b12ec245bd008cd464f8d9a, type: 3}
---- !u!114 &6416543916779721716
+--- !u!114 &6402405779323789856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,8 +117,8 @@ MonoBehaviour:
   hitEffectParent: {fileID: 0}
   hitEffect: {fileID: 19800002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
   bodyParts:
-  - {fileID: 8325136761114372947}
---- !u!114 &8325136761114372947
+  - {fileID: 9065702224637036965}
+--- !u!114 &9065702224637036965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

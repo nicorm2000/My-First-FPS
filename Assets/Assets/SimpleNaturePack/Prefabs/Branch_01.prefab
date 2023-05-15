@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1493958779013422100}
   - component: {fileID: 1493958779014389460}
   - component: {fileID: 6840989815014681252}
-  - component: {fileID: 4358861478748508702}
-  - component: {fileID: 1339211181879191818}
+  - component: {fileID: 1667121594663688905}
+  - component: {fileID: 2294644523445759764}
   m_Layer: 0
   m_Name: Branch_01
   m_TagString: Untagged
@@ -100,7 +100,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 5528351815fd4c04abf537f22c7e18f1, type: 3}
---- !u!114 &4358861478748508702
+--- !u!114 &1667121594663688905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 6840989815014681252}
   damageMultiplier: 0
---- !u!114 &1339211181879191818
+--- !u!114 &2294644523445759764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,4 +131,4 @@ MonoBehaviour:
   hitEffectParent: {fileID: 0}
   hitEffect: {fileID: 19800002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
   bodyParts:
-  - {fileID: 4358861478748508702}
+  - {fileID: 1667121594663688905}
