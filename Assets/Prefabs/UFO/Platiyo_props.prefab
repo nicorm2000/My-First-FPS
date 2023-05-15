@@ -509,12 +509,12 @@ MonoBehaviour:
   hitEffectParent: {fileID: 5446612060320310921, guid: 7ac2411c22495464c9bc94d170dae95f, type: 3}
   hitEffect: {fileID: 19800002, guid: f8860a5092fd6d143a7b3f075e204e6b, type: 3}
   bodyParts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3296097250820609249}
+  - {fileID: 2423524402401828053}
+  - {fileID: 6373212958453010008}
+  - {fileID: 8333302345011489921}
+  - {fileID: 681862734506379571}
+  - {fileID: 476857554926564829}
 --- !u!114 &5439759463224412947
 MonoBehaviour:
   m_ObjectHideFlags: 0

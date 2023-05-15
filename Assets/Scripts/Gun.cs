@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,6 +23,9 @@ public class Gun : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] float hitEffectDuration;
 
+    [Header("UI Settings")]
+    [SerializeField] private TextMeshProUGUI ammoText;
+
     [Header("Debugger")]
     [SerializeField] bool displayLaser = true;
     [SerializeField] GameObject laser;
@@ -43,6 +47,18 @@ public class Gun : MonoBehaviour
         reloadWait = new WaitForSeconds(reloadTime);
 
         currentAmmo = maxAmmo;
+    }
+
+    private void UpdateAmmoText()
+    {
+        if (!isDropped)
+        {
+            ammoText.text = "" + currentAmmo;
+        }
+        else
+        {
+            ammoText.text = "";
+        }
     }
 
     public virtual void Shoot()//Lets the gun shoot and checks if it is or not a shotgun so the bullets are different
@@ -123,13 +139,15 @@ public class Gun : MonoBehaviour
             }
             else
             {
-                StartCoroutine(Reload());
+                OnReload();
             }
             yield break;
         }
+
+        UpdateAmmoText();
     }
 
-    protected IEnumerator Reload()//Coroutine that reloads the weapon
+    protected IEnumerator OnReload()//Coroutine that reloads the weapon
     {
         isReloading = true;
 
@@ -198,6 +216,8 @@ public class Gun : MonoBehaviour
 
     public void OnDropWeapon()
     {
+        UpdateAmmoText();
+
         if (isDropped)
         {
             return;
@@ -227,6 +247,8 @@ public class Gun : MonoBehaviour
 
     public void OnPickWeapon()
     {
+        UpdateAmmoText();
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject existingWeapon = FindWeaponInChildren(player.transform);
 

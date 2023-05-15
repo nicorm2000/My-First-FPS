@@ -23,6 +23,6 @@ public class RapidFire : Gun
             Shoot();
         }
 
-        StartCoroutine(Reload());
+        OnReload();
     }
 }
