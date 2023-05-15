@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BodyPart : MonoBehaviour, IDamageable
 {
-    [SerializeField] new Collider collider = null;
+    [SerializeField] new Collider collider;
     [SerializeField] float damageMultiplier = 0f;
 
     public float DamageMultiplier => damageMultiplier;
