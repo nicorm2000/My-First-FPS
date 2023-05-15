@@ -19,6 +19,9 @@ public class Gun : MonoBehaviour
 
     [SerializeField] float inaccuracyDistance = 5f;
 
+    [SerializeField] ParticleSystem hitEffect;
+    [SerializeField] float hitEffectDuration;
+
     [Header("Debugger")]
     [SerializeField] bool displayLaser = true;
     [SerializeField] GameObject laser;
@@ -72,6 +75,10 @@ public class Gun : MonoBehaviour
 
     public bool RayCastShoot()//The logic behind the shooting, it is made into a function because it is used more than once
     {
+        GameObject effect = Instantiate(hitEffect.gameObject, effectsHolder.position, Quaternion.identity, muzzle);
+
+        effect.transform.position = muzzle.transform.position;
+
         RaycastHit hit;
 
         Vector3 shootingDir = GetShootingDirection();
@@ -88,6 +95,9 @@ public class Gun : MonoBehaviour
             {
                 CreateLaser(hit.point);
             }
+
+            Destroy(effect, hitEffectDuration);
+
             return true;
         }
         else
@@ -96,6 +106,9 @@ public class Gun : MonoBehaviour
             {
                 CreateLaser(cam.position + shootingDir * range);
             }
+
+            Destroy(effect, hitEffectDuration);
+
             return false;
         }
     }
