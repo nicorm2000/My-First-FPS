@@ -10,7 +10,7 @@ public class InstantiatedBullets : Gun
     public override bool BulletShoot()
     {
         //Turn off dummy and turn on when reloading
-        //When the dummy is off replace with the instantiat and when reloading place the fake one
+        //When the dummy is off replace with the instantiate and when reloading place the fake one
 
         GameObject bulletGO = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
 

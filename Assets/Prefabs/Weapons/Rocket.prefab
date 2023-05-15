@@ -160,6 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ab8670e6615f44981392060c1afb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 8811736178019618997, guid: 36810a5beec1b784c86f6b00436c17fa, type: 3}
+  hitEffect: {fileID: 1341575567239106885, guid: 36810a5beec1b784c86f6b00436c17fa, type: 3}
   explosionRadius: 2
   hitEffectDuration: 2

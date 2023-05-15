@@ -6454,6 +6454,10 @@ PrefabInstance:
       propertyPath: inaccuracyDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7276124937418596926, guid: d5681afbb4f0fa34ebd02347d0de0c45, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9076094077777912172, guid: d5681afbb4f0fa34ebd02347d0de0c45, type: 3}
       propertyPath: m_Name
       value: RPG-7
