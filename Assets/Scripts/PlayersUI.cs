@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayersUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] TMP_Text ammoText;
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateAmmoText(int currentAmmo)
     {
-        
+        if (currentAmmo == -1)
+        {
+            ammoText.text = "";
+        }
+        else
+        {
+            ammoText.text = currentAmmo.ToString();
+        }
     }
 }

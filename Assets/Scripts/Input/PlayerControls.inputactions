@@ -78,9 +78,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inspect Weapon",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "1a26a503-88e8-43fe-b132-0132ba0bf5b0",
+                    "id": "092ad1f2-3e7d-4ada-b33c-3109031b3727",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -299,23 +299,23 @@
                 },
                 {
                     "name": "",
-                    "id": "6eaa8b20-381a-4921-a23c-071a605e78a6",
-                    "path": "<Keyboard>/y",
+                    "id": "ba3c8a1e-4bec-46fe-bed1-8d74e8ac3f5d",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inspect Weapon",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "8b39c661-86d6-427e-b6de-7357962bf618",
-                    "path": "<DualShockGamepad>/dpad/down",
+                    "id": "2e3bc051-1506-4b1a-a232-33225b710d72",
+                    "path": "<DualShockGamepad>/select",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inspect Weapon",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

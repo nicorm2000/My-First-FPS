@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] Movement movement;
     [SerializeField] MouseLook mouseLook;
     [SerializeField] public Gun gun;
+    [SerializeField] PauseManager pause;
 
     PlayerControls controls;
     PlayerControls.GroundMovementActions groundMovement;
@@ -71,6 +72,11 @@ public class InputManager : MonoBehaviour
         {
             StopCoroutine(fireCoroutine);
         }
+    }
+
+    void OnPause(InputValue input)
+    {
+        pause.Pause();
     }
 
     private void OnEnable()

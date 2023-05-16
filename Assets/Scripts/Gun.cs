@@ -62,6 +62,8 @@ public class Gun : MonoBehaviour
                 UpdateAmmo();
             }
         }
+
+        FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
     }
 
     protected void UpdateAmmo()
@@ -148,6 +150,8 @@ public class Gun : MonoBehaviour
         Debug.Log("Weapon Reloaded");
 
         isReloading = false;
+
+        FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
     }
 
     protected bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
@@ -223,6 +227,7 @@ public class Gun : MonoBehaviour
 
         GetComponent<BoxCollider>().enabled = true;
         FindObjectOfType<InputManager>().gun = null;
+        FindObjectOfType<PlayersUI>().UpdateAmmoText(-1);
         isCurrentWeapon = false;
     }
 
@@ -268,6 +273,8 @@ public class Gun : MonoBehaviour
 
                 FindObjectOfType<InputManager>().gun = this;
                 isCurrentWeapon = true;
+
+                FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
             }
         }
     }

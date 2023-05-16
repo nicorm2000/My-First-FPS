@@ -100,9 +100,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Inspect Weapon"",
+                    ""name"": ""Pause"",
                     ""type"": ""Button"",
-                    ""id"": ""1a26a503-88e8-43fe-b132-0132ba0bf5b0"",
+                    ""id"": ""092ad1f2-3e7d-4ada-b33c-3109031b3727"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -321,23 +321,23 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6eaa8b20-381a-4921-a23c-071a605e78a6"",
-                    ""path"": ""<Keyboard>/y"",
+                    ""id"": ""ba3c8a1e-4bec-46fe-bed1-8d74e8ac3f5d"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Inspect Weapon"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8b39c661-86d6-427e-b6de-7357962bf618"",
-                    ""path"": ""<DualShockGamepad>/dpad/down"",
+                    ""id"": ""2e3bc051-1506-4b1a-a232-33225b710d72"",
+                    ""path"": ""<DualShockGamepad>/select"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Inspect Weapon"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -356,7 +356,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_GroundMovement_DropWeapon = m_GroundMovement.FindAction("Drop Weapon", throwIfNotFound: true);
         m_GroundMovement_PickWeapon = m_GroundMovement.FindAction("Pick Weapon", throwIfNotFound: true);
         m_GroundMovement_Reload = m_GroundMovement.FindAction("Reload", throwIfNotFound: true);
-        m_GroundMovement_InspectWeapon = m_GroundMovement.FindAction("Inspect Weapon", throwIfNotFound: true);
+        m_GroundMovement_Pause = m_GroundMovement.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -424,7 +424,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_GroundMovement_DropWeapon;
     private readonly InputAction m_GroundMovement_PickWeapon;
     private readonly InputAction m_GroundMovement_Reload;
-    private readonly InputAction m_GroundMovement_InspectWeapon;
+    private readonly InputAction m_GroundMovement_Pause;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -437,7 +437,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @DropWeapon => m_Wrapper.m_GroundMovement_DropWeapon;
         public InputAction @PickWeapon => m_Wrapper.m_GroundMovement_PickWeapon;
         public InputAction @Reload => m_Wrapper.m_GroundMovement_Reload;
-        public InputAction @InspectWeapon => m_Wrapper.m_GroundMovement_InspectWeapon;
+        public InputAction @Pause => m_Wrapper.m_GroundMovement_Pause;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -471,9 +471,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Reload.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnReload;
                 @Reload.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnReload;
                 @Reload.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnReload;
-                @InspectWeapon.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnInspectWeapon;
-                @InspectWeapon.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnInspectWeapon;
-                @InspectWeapon.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnInspectWeapon;
+                @Pause.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -502,9 +502,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Reload.started += instance.OnReload;
                 @Reload.performed += instance.OnReload;
                 @Reload.canceled += instance.OnReload;
-                @InspectWeapon.started += instance.OnInspectWeapon;
-                @InspectWeapon.performed += instance.OnInspectWeapon;
-                @InspectWeapon.canceled += instance.OnInspectWeapon;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -519,6 +519,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnDropWeapon(InputAction.CallbackContext context);
         void OnPickWeapon(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
-        void OnInspectWeapon(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
