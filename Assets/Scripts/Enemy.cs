@@ -28,15 +28,20 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage, Vector3 hitPos, Vector3 hitNormal)
+    public void TakeDamage(float damage, RaycastHit hit)
     {
         //Creates the VFX for the shooting effect towards an object
-        ParticleSystem hitParticleEffect = Instantiate(hitEffect, hitPos, Quaternion.LookRotation(hitNormal), hitEffectParent.transform);
+        ParticleSystem hitParticleEffect = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal), hit.collider.transform);
 
+        hitParticleEffect.transform.parent = null;
+
+        hitParticleEffect.transform.localScale = Vector3.one;
+
+        hitParticleEffect.transform.parent = hit.collider.transform;
+        
         effects.Add(hitParticleEffect);
 
         //Makes the effect a child so if the object is destroyed the effect is destroyed as well
-        hitParticleEffect.transform.parent = hitEffectParent.transform;
 
         if (!(gameObject.tag == "Ground"))
         {

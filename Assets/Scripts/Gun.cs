@@ -93,7 +93,7 @@ public class Gun : MonoBehaviour
 
             if (auxDamageable != null)
             {
-                auxDamageable.TakeDamage(damage, hit.point, hit.normal);
+                auxDamageable.TakeDamage(damage, hit);
             }
             if (displayLaser)
             {
