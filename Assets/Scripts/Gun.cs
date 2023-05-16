@@ -36,7 +36,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject positionGun;
     [SerializeField] Transform originParent;
     [SerializeField] protected Transform effectsHolder;
-    [SerializeField] PlayersUI playersUI;
+    [SerializeField] AmmoUI playersUI;
 
     protected virtual void Awake()
     {
@@ -64,7 +64,7 @@ public class Gun : MonoBehaviour
             }
         }
 
-        FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
+        FindObjectOfType<AmmoUI>().UpdateAmmoText(currentAmmo);
     }
 
     protected void UpdateAmmo()
@@ -237,7 +237,7 @@ public class Gun : MonoBehaviour
 
         GetComponent<BoxCollider>().enabled = true;
         FindObjectOfType<InputManager>().gun = null;
-        FindObjectOfType<PlayersUI>().UpdateAmmoText(-1);
+        FindObjectOfType<AmmoUI>().UpdateAmmoText(-1);
         isCurrentWeapon = false;
     }
 
@@ -284,7 +284,7 @@ public class Gun : MonoBehaviour
                 FindObjectOfType<InputManager>().gun = this;
                 isCurrentWeapon = true;
 
-                FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
+                FindObjectOfType<AmmoUI>().UpdateAmmoText(currentAmmo);
             }
         }
     }

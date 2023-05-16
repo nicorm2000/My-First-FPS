@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayersUI : MonoBehaviour
+public class AmmoUI : MonoBehaviour
 {
     [SerializeField] TMP_Text ammoText;
     [SerializeField] Image reload;

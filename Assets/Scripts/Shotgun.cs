@@ -16,6 +16,6 @@ public class Shotgun : Gun
             RayCastShoot();
         }
 
-        FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
+        FindObjectOfType<AmmoUI>().UpdateAmmoText(currentAmmo);
     }
 }
