@@ -211,6 +211,17 @@
                 },
                 {
                     "name": "",
+                    "id": "88ae233b-ae04-4666-974f-40001f70b6e4",
+                    "path": "<DualShockGamepad>/rightStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "65019088-d31e-4fcc-9d8c-923f67aced7a",
                     "path": "<Mouse>/delta/y",
                     "interactions": "",
@@ -222,8 +233,30 @@
                 },
                 {
                     "name": "",
+                    "id": "11742173-fd1d-4df5-a9b7-09b02f42859b",
+                    "path": "<DualShockGamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "61dafab1-3d7f-435e-9cd0-489ca8c79fb9",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6d40828-0e76-4957-8277-5534dce3f8f1",
+                    "path": "<DualShockGamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
