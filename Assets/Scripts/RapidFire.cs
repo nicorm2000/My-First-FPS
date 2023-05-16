@@ -5,23 +5,47 @@ using UnityEngine;
 public class RapidFire : Gun
 {
     [Header("Rapid Fire")]
-    WaitForSeconds rapidFireWait;
+    [SerializeField] int bulletsPerBurst = 3;
+    private float rapidFireWait;
+    private bool isInRapidFire = false;
 
     protected override void Awake()
     {
         base.Awake();
-        rapidFireWait = new WaitForSeconds(1 / fireRate);
+        rapidFireWait = 1 / fireRate;
+    }
+    
+    public override void CheckBeforeShoot()
+    {
+        if (FindObjectOfType<InputManager>().gun == null)
+        {
+            return;
+        }
+
+        if (isInRapidFire)
+        {
+            return;
+        }
+
+        StartCoroutine(FireRateCoroutine());
     }
 
-    public override IEnumerator ShootCoroutine()
+    public IEnumerator FireRateCoroutine()
     {
+        isInRapidFire = true;
 
-        while (CanShoot())
+        int actualShoot = 0;
+
+        while (CanShoot() && actualShoot < bulletsPerBurst)
         {
-            yield return rapidFireWait;
-
             Shoot();
+
+            actualShoot++;
+
+            yield return new WaitForSeconds(rapidFireWait);
         }
+
+        isInRapidFire = false;
 
         OnReload();
     }

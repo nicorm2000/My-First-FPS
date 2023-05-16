@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayersUI : MonoBehaviour
 {
     [SerializeField] TMP_Text ammoText;
+    [SerializeField] Image reload;
 
     public void UpdateAmmoText(int currentAmmo)
     {
@@ -15,5 +17,10 @@ public class PlayersUI : MonoBehaviour
         {
             ammoText.text = currentAmmo.ToString();
         }
+    }
+
+    public void ReloadAnim(float currentTimeOfReload, float maxTimeOfReload)
+    {
+        reload.fillAmount = currentTimeOfReload/maxTimeOfReload;
     }
 }

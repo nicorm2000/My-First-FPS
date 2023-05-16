@@ -36,6 +36,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject positionGun;
     [SerializeField] Transform originParent;
     [SerializeField] protected Transform effectsHolder;
+    [SerializeField] PlayersUI playersUI;
 
     protected virtual void Awake()
     {
@@ -116,8 +117,13 @@ public class Gun : MonoBehaviour
         }
     }
     
-    public virtual IEnumerator ShootCoroutine()//Coroutine that checks which fire type is being used
+    public virtual void CheckBeforeShoot()//Coroutine that checks which fire type is being used
     {
+        if (FindObjectOfType<InputManager>().gun == null)
+        {
+            return;
+        }
+
         if (!isReloading)
         {
             if (CanShoot())
@@ -128,30 +134,36 @@ public class Gun : MonoBehaviour
             {
                 OnReload();
             }
-            yield break;
         }
     }
 
     protected IEnumerator OnReload()//Coroutine that reloads the weapon
     {
-        isReloading = true;
-
         if (currentAmmo == maxAmmo)
         {
             yield break;
         }
 
-        Debug.Log("Reloading...");
+        isReloading = true;
 
-        yield return new WaitForSeconds(reloadTime);
+        float currentReloadTime = 0;
+
+        while(currentReloadTime < reloadTime)
+        {
+            currentReloadTime += Time.deltaTime;
+
+            playersUI.ReloadAnim(currentReloadTime, reloadTime);
+
+            yield return new WaitForEndOfFrame();
+        }
 
         currentAmmo = maxAmmo;
 
-        Debug.Log("Weapon Reloaded");
-
         isReloading = false;
 
-        FindObjectOfType<PlayersUI>().UpdateAmmoText(currentAmmo);
+        playersUI.UpdateAmmoText(currentAmmo);
+
+        playersUI.ReloadAnim(0f, 1f);
     }
 
     protected bool CanShoot()//Checks if the weapon can shoot based on the bullets remaining
@@ -183,8 +195,6 @@ public class Gun : MonoBehaviour
         StartCoroutine(FadeLaser(lr));
     }
 
-    // <summary>
-    // Makes the laser trail fade away
     IEnumerator FadeLaser(LineRenderer lr)
     {
         float alpha = 1f;

@@ -14,8 +14,6 @@ public class InputManager : MonoBehaviour
     Vector2 horizontalInput;
     Vector2 mouseInput;
 
-    Coroutine fireCoroutine;
-
     private void Awake()
     {
         InitInputs();
@@ -42,8 +40,6 @@ public class InputManager : MonoBehaviour
 
         //Here is the subscription and unsubscription to the Shoot event happens
         groundMovement.Shoot.started += _ => StartFiring();
-
-        groundMovement.Shoot.canceled += _ => StopFiring();
     }
 
     private void Update()
@@ -62,15 +58,7 @@ public class InputManager : MonoBehaviour
     {
         if (gun != null)
         {
-            fireCoroutine = StartCoroutine(gun.ShootCoroutine());
-        }
-    }
-
-    void StopFiring()
-    {
-        if (fireCoroutine != null)
-        {
-            StopCoroutine(fireCoroutine);
+            gun.CheckBeforeShoot();
         }
     }
 
