@@ -21747,6 +21747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1442630977}
     m_Modifications:
+    - target: {fileID: 1666656617049894051, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 1888420917099780517, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
       propertyPath: hitEffectParent
       value: 
@@ -21772,10 +21776,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 382333516}
     - target: {fileID: 1888420917907984133, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
-      propertyPath: hitEffectParent
-      value: 
-      objectReference: {fileID: 382333516}
-    - target: {fileID: 1888420917941702052, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
@@ -21831,8 +21831,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fair Place 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5440330891775544363, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1030681271}
+    - target: {fileID: 6020921307197406235, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1030681271}
+    - target: {fileID: 6020921307197406235, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
+      propertyPath: designatedArea
+      value: 
+      objectReference: {fileID: 1797336577046307430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
+--- !u!65 &1797336577046307430 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2236768777094800305, guid: 0659f856c841e4a4f8badd3300268f20, type: 3}
+  m_PrefabInstance: {fileID: 1797336577046307429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2833503665279420172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21840,6 +21857,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1442630977}
     m_Modifications:
+    - target: {fileID: 1165914724201979273, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1030681271}
     - target: {fileID: 1692372363574545319, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21888,11 +21909,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fair Place 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2618522659019051757, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+    - target: {fileID: 1868640308576127091, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
-    - target: {fileID: 2618522659152564693, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+    - target: {fileID: 2385255747096899019, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
@@ -21924,15 +21945,15 @@ PrefabInstance:
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
+    - target: {fileID: 3523485506334019372, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
     - target: {fileID: 3523485506458205431, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
     - target: {fileID: 3523485506551395663, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
-      propertyPath: hitEffectParent
-      value: 
-      objectReference: {fileID: 382333516}
-    - target: {fileID: 3523485506606870902, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
@@ -21944,8 +21965,21 @@ PrefabInstance:
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
+    - target: {fileID: 3998222102506795700, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1030681271}
+    - target: {fileID: 3998222102506795700, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+      propertyPath: designatedArea
+      value: 
+      objectReference: {fileID: 2833503665279420173}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+--- !u!65 &2833503665279420173 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5013786580764731210, guid: 3b7b600bf0226814a97e22e294679812, type: 3}
+  m_PrefabInstance: {fileID: 2833503665279420172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3662347655679456332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22051,6 +22085,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1442630977}
     m_Modifications:
+    - target: {fileID: 1274972444, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1030681271}
     - target: {fileID: 194960526026120865, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22107,10 +22145,6 @@ PrefabInstance:
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
-    - target: {fileID: 5703977381752144786, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
-      propertyPath: hitEffectParent
-      value: 
-      objectReference: {fileID: 382333516}
     - target: {fileID: 5703977381811740795, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
       propertyPath: hitEffectParent
       value: 
@@ -22135,6 +22169,18 @@ PrefabInstance:
       propertyPath: hitEffectParent
       value: 
       objectReference: {fileID: 382333516}
+    - target: {fileID: 8593751818807293331, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
+      propertyPath: hitEffectParent
+      value: 
+      objectReference: {fileID: 382333516}
+    - target: {fileID: 9052745837060361630, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1030681271}
+    - target: {fileID: 9052745837060361630, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
+      propertyPath: designatedArea
+      value: 
+      objectReference: {fileID: 9052745837980512853}
     - target: {fileID: 9125889945872419032, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
       propertyPath: hitEffectParent
       value: 
@@ -22157,3 +22203,8 @@ PrefabInstance:
       objectReference: {fileID: 382333516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
+--- !u!65 &9052745837980512853 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 9052745837060361625, guid: f0cce1a1abbb38b42aede37fce957873, type: 3}
+  m_PrefabInstance: {fileID: 9052745837980512852}
+  m_PrefabAsset: {fileID: 0}
