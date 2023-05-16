@@ -113,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 1593555329286991683}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &262854912106612881
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 7407504260354054523}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &1257982213417070475
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4216967761847335262}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &1574705218653518342
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +458,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 3386950155622141015}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &1792898934030587370
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 8466404933814098185}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &2094265520100018950
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 385735890766967095}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &2280005835013184605
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 8078495342406996737}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &2721270526827919283
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +918,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4696349107245218224}
   damageMultiplier: 5
+  scoreMultiplier: 5
+  score: 5
 --- !u!1 &2940291478043090670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4078902244442119463}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &3174856431959710014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 683106147695055491}
   damageMultiplier: 1
+  scoreMultiplier: 1
+  score: 1
 --- !u!1 &4045648977052899440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 8632609346550512300}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &4498091476765935969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 2935510846566392785}
   damageMultiplier: 10
+  scoreMultiplier: 10
+  score: 10
 --- !u!1 &4968903081102313209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 1166263300479069248}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &6174738398338627168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 519164772108559168}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &6398470492268355612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1723,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 7096230346112052420}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &6671488548571999849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1838,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 1506100257758930070}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &7043378500325602001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2050,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 6331803182775985594}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &7270457501117765984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 392293677229406129}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &7504157205637892290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 8981478545787890725}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &7703235614470735015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,6 +2395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 2842728081196042068}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &8069385879895563429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4626096886498621803}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &8994024191445883924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 2503381551644508180}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!1 &9062608634053591935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,3 +2867,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 2340270257003363107}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1

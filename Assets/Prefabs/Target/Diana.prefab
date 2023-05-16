@@ -280,6 +280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 3098023522833190706}
   damageMultiplier: 5
+  scoreMultiplier: 5
+  score: 5
 --- !u!1001 &2968297488631110760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,6 +373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 8424609670576162604}
   damageMultiplier: 1
+  scoreMultiplier: 1
+  score: 1
 --- !u!4 &6975887125562329642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5331935091760797250, guid: 68b8fb8386020bb45a5182e549dd567b, type: 3}
@@ -467,6 +471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4488505629141532223}
   damageMultiplier: 10
+  scoreMultiplier: 10
+  score: 10
 --- !u!4 &6975887125723033424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1533033401625894086, guid: a93e61bc11966a34ea327cea5adff59b, type: 3}

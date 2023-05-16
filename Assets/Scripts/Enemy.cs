@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,20 +16,24 @@ public class Enemy : MonoBehaviour
 
     private List<ParticleSystem> effects = new List<ParticleSystem>();
 
-    private void Awake()
-    {
-        currentHealth = maxHealth;
-    }
+    private Action<int> OnScoreAdded = null;
 
-    private void Start()
+    public void Init(Action<int> updateScore)
     {
+        OnScoreAdded = updateScore;
+
         for (int i = 0; i < bodyParts.Length; i++)
         {
             bodyParts[i].Init(TakeDamage, TakeDamage);
         }
     }
 
-    public void TakeDamage(float damage, RaycastHit hit)
+    private void Awake()
+    {
+        currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(float damage, RaycastHit hit, int score)
     {
         //Creates the VFX for the shooting effect towards an object
         ParticleSystem hitParticleEffect = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal), hit.collider.transform);
@@ -46,6 +51,7 @@ public class Enemy : MonoBehaviour
         if (!(gameObject.tag == "Ground"))
         {
             currentHealth -= damage;
+            OnScoreAdded?.Invoke(score);
 
             if (currentHealth <= 0)
             {
@@ -56,13 +62,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, int score)
     {
         if (!(gameObject.tag == "Ground"))
         {
             currentHealth -= damage;
-
-            Debug.Log(damage);
+            OnScoreAdded?.Invoke(score);
 
             if (currentHealth <= 0)
             {
@@ -73,8 +78,6 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log(name + " was destroyed");
-
         gameObject.SetActive(false);
 
         for (int i = 0; i < effects.Count; i++)

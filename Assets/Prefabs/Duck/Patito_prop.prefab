@@ -99,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 3084089985923107986}
   damageMultiplier: 5
+  scoreMultiplier: 5
+  score: 5
 --- !u!64 &3084089985923107986
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -212,6 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 523279386149870124}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!64 &523279386149870124
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -325,6 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 7708710783025710425}
   damageMultiplier: 1
+  scoreMultiplier: 1
+  score: 1
 --- !u!64 &7708710783025710425
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -438,6 +444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4481967256338640299}
   damageMultiplier: 10
+  scoreMultiplier: 10
+  score: 10
 --- !u!64 &4481967256338640299
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -648,6 +656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 7904079415003456179}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!64 &7904079415003456179
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -761,6 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 607962736005832695}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!64 &607962736005832695
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -971,6 +983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 789730820785943091}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!64 &789730820785943091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1084,6 +1098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 5685160119676754900}
   damageMultiplier: 0
+  scoreMultiplier: 0
+  score: 1
 --- !u!64 &5685160119676754900
 MeshCollider:
   m_ObjectHideFlags: 0

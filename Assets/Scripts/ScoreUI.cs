@@ -1,28 +1,30 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class ScoreUI : MonoBehaviour
 {
-    [SerializeField] TMP_Text highestScore;
+    [SerializeField] List<ScoreArea> areas;
+    [SerializeField] TMP_Text highestScoreUI;
     [SerializeField] TMP_Text scoreUI;
 
-    private int currentScore = 0;
-
-    public void UpdateScoreText(int score)
+    public void UpdateScoreText(int currentScore, int currentHighScore)
     {
-        if (score <= 0)
+        if (currentScore == 0)
         {
-            scoreUI.text = "";
+            highestScoreUI.text = "High Score: " + currentHighScore.ToString();
+            scoreUI.text = "Score: " + currentScore.ToString();
         }
         else
         {
-            if (score > currentScore)
+            if (currentScore > currentHighScore)
             {
-                scoreUI.text = highestScore.ToString();
+                currentHighScore = currentScore;
             }
 
-            scoreUI.text = score.ToString();
+            highestScoreUI.text = "High Score: " + currentHighScore.ToString();
+            scoreUI.text = "Score: " + currentScore.ToString();
         }
     }
 }
